@@ -1,5 +1,5 @@
 @import './logo.css';
-@import './bascket.css';
+@import './basket.css';
 
 .header {
   display: flex;
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.logo, .bascket, .title {
+.logo, .basket  {
   min-width: 150px;
   display: flex;
   height: 100%;
@@ -16,16 +16,19 @@
 
 .title {
   display: flex;
+  width: 30%;
+  height: 100%;
+  font-size: calc(5px + 1vw);
 }
 
 .title p{
   font-weight: bold;
   font-style: italic;
-  margin: auto;
+  margin: auto auto auto 0;
 }
 
 .search {
-  width: calc(100% - 450px);
+  width: calc(70% - 300px);
   align-self: center;
   display: flex;
   justify-content: flex-end;
@@ -33,6 +36,8 @@
 
 .inp-search {
   display: inline-block;
-  padding: 3px;
+  padding: 5px;
   margin-right: 50px;
+  height: 30px;
+  width: 250px;
 }

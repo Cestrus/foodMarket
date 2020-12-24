@@ -8,16 +8,17 @@ body {
   background-repeat: no-repeat;
 }
 
-.container {
+#root {
   display: grid;
   grid-template-areas: 'header header'
                         'aside main'
                         'footer footer';
-  grid-template-rows: 100px 1fr 50px;                 
-  grid-template-columns: 250px 75%;  
+  grid-template-rows: 100px 1fr 50px;
+  grid-template-columns: 250px calc(100% - 250px);
   margin: 0 100px;
   height: 100%;
-  background-image: url;
+  /*width: 100%;*/
+  /*background-image: url;*/
 }
 
 .header {

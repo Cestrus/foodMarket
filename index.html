@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-  <div class="container">
+  <div id="root">
     <header class="header">
       <div class="logo">
         <div class="logo__img-wrap">
           <img src="https://i.pinimg.com/originals/e4/4c/57/e44c577196d295eb166d7455078f5ca9.png" alt="logo" class="logo__img">
-        </div>        
+        </div>
       </div>
-      <div class="title"><p>HEALTHY FOOD </p></div>
+      <div class="title"><p>HEALTHY FOOD FOR YOU</p></div>
       <div class="search">
         <input type="text" placeholder="search" class="inp-search">
       </div>
-      <div class="bascket">
+      <div class="basket">
         <!-- <a href="#"> -->
-          <div class="bascket__img-wrap">
-            <img src="https://cdn.onlinewebfonts.com/svg/img_220118.png" alt="backet" class="bascket__img">
+          <div class="basket__img-wrap">
+            <img src="https://cdn.onlinewebfonts.com/svg/img_220118.png" alt="basket" class="basket__img">
           </div>
         <!-- </a> -->
       </div>
@@ -35,6 +35,18 @@
     </aside>
     <main class="plate">
       <div class="plate-container">
+        <div class="card-container">
+          <div class="item__img-wrap">
+            <img src="https://st2.depositphotos.com/1177973/6616/i/600/depositphotos_66162528-stock-photo-metal-shopping-basket-with-groceries.jpg" alt="food" class="item__img">
+          </div>
+          <div class="item__description">
+            <p class="item__title">Sweety pepper</p>
+            <button class="btn-buy">BUY</button>
+            <div class="item__price-container">
+              <p class="item__price">120.00 грн/<span>кг</span></p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </main>
@@ -42,14 +54,14 @@
       <div class="logo">
         <div class="logo__img-wrap">
           <img src="https://i.pinimg.com/originals/e4/4c/57/e44c577196d295eb166d7455078f5ca9.png" alt="logo" class="logo__img">
-        </div>        
+        </div>
       </div>
       <div class="copyright">
         <p>@copyright by somebody</p>
       </div>
     </footer>
   </div>
-  
+
   <script src="./script/main.js" type="module"></script>
 </body>
 </html>
