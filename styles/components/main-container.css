@@ -1,0 +1,37 @@
+body {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://i.pinimg.com/originals/33/cb/7c/33cb7c366d3115523fcd9123aaaa2ce1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 'header header'
+                        'aside main'
+                        'footer footer';
+  grid-template-rows: 100px 1fr 50px;                 
+  grid-template-columns: 250px 75%;  
+  margin: 0 100px;
+  height: 100%;
+  background-image: url;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.plate {
+  grid-area: main;
+}
+
+.aside {
+  grid-area: aside;
+}

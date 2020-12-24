@@ -1,0 +1,38 @@
+@import './logo.css';
+@import './bascket.css';
+
+.header {
+  display: flex;
+  font-size: 15px;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+}
+
+.logo, .bascket, .title {
+  min-width: 150px;
+  display: flex;
+  height: 100%;
+}
+
+.title {
+  display: flex;
+}
+
+.title p{
+  font-weight: bold;
+  font-style: italic;
+  margin: auto;
+}
+
+.search {
+  width: calc(100% - 450px);
+  align-self: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inp-search {
+  display: inline-block;
+  padding: 3px;
+  margin-right: 50px;
+}

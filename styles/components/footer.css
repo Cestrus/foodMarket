@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.copyright {
+  font-family: Verdana, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 50px;
+  margin-right: 0;
+}

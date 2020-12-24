@@ -1,0 +1,7 @@
+@import './reset.css';
+@import './normolize.css';
+@import './components/main-container.css';
+@import './components/header.css';
+@import './components/aside.css';
+@import './components/plate-container.css';
+@import './components/footer.css';
