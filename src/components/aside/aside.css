@@ -14,11 +14,11 @@
   width: 100%;
 }
 
-.sort-by__title {
+.sort-title {
   margin-bottom: 20px;
 }
 
-.sort-by__type, .sort-by__name {
+.sort-by__price, .sort-by__name {
   margin: 10px 0 10px 0;
   cursor: pointer;
 }

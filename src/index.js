@@ -1,4 +1,7 @@
 import {ControllerMarket} from "./app/controller-market.js";
 
 
-new ControllerMarket()
+
+
+const market = new ControllerMarket();
+market.start();

@@ -1,5 +1,4 @@
-@import './logo.css';
-@import './basket.css';
+@import '../basket/basket.css';
 
 .header {
   display: flex;

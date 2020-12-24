@@ -1,4 +1,8 @@
-@import './card.css';
+@import '../card/card.css';
+
+.plate {
+  min-height: calc(100% - 150px);
+}
 
 .plate-container {
   display: grid;
@@ -16,8 +20,4 @@
   position: absolute;
   width: 15px;
   height: 50px;
-}
-
-.plate-container::after {
-
 }
