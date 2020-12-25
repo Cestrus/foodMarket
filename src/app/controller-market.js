@@ -6,6 +6,8 @@ import Aside from "../components/aside/aside.js";
 import Plate from "../components/plate/plate.js";
 import Footer from "../components/footer/footer.js";
 
+import Basket from '../components/basket/basket.js';
+
 
 
 

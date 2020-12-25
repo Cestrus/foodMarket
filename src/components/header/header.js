@@ -1,4 +1,4 @@
-import Basket from "../basket/basket.js";
+import BasketIcon from "../basket-icon/basket-icon.js";
 
 const Header = () => {
 
@@ -13,7 +13,7 @@ const Header = () => {
       <div class="search">
         <input type="text" placeholder="search" class="inp-search">
       </div>
-      ${ Basket() }
+      ${ BasketIcon() }
 <!--      <div class="basket">-->
 <!--        <div class="basket__img-wrap">-->
 <!--          <img src="https://cdn.onlinewebfonts.com/svg/img_220118.png" alt="basket" class="basket__img">-->

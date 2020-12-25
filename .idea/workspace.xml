@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c70526cb-7d8f-4675-a4ff-9fef1b0ad495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/aside/aside.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/basket/basket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card/card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/footer/footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/logo/logo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/plate/plate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/basket-icon/basket-icon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/app/controller-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/app/model-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/app/view-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/aside.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/aside/aside.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/basket.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logo/logo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/plate-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/plate/plate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/plate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/root.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller-market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket-icon/basket-icon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +58,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608801218491</updated>
-      <workItem from="1608801220400" duration="32395000" />
+      <workItem from="1608801220400" duration="38926000" />
+      <workItem from="1608889268268" duration="4248000" />
     </task>
     <servers />
   </component>
