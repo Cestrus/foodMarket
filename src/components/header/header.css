@@ -1,16 +1,14 @@
 @import '../basket-icon/basket-icon.css';
+@import '../authorization/authorization.css';
+@import '../logo/logo.css';
+
+
 
 .header {
   display: flex;
   font-size: 15px;
   border-bottom: 2px solid black;
   box-sizing: border-box;
-}
-
-.logo, .basket  {
-  min-width: 150px;
-  display: flex;
-  height: 100%;
 }
 
 .title {

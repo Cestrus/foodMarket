@@ -12,6 +12,8 @@ export class ViewMarket {
 			// sort_by_price: document.querySelector('.sort_by_price'),
 			// sort_by_price: document.querySelector('.sort_by_price'),
 			basket: document.querySelector('.basket__img-wrap'),
+			signInOut: document.querySelector('.signInOut'),
+			profile: document.querySelector('.profile'),
 		}
 	}
 

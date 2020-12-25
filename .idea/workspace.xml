@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c70526cb-7d8f-4675-a4ff-9fef1b0ad495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/basket-icon/basket-icon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authorization/authorization.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sign-in-out/sign-in-out.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sign-in-out/sign-in-out.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/controller-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/basket/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket-icon/basket-icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/basket/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view-market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket-icon/basket-icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket-icon/basket-icon.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logo/logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logo/logo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logo/logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logo/logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/root.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -36,6 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -59,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608801218491</updated>
       <workItem from="1608801220400" duration="38926000" />
-      <workItem from="1608889268268" duration="4248000" />
+      <workItem from="1608889268268" duration="12748000" />
     </task>
     <servers />
   </component>

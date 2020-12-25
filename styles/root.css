@@ -35,6 +35,10 @@ body {
   grid-area: aside;
 }
 
-.hide {
+.hidden {
   visibility: hidden;
+}
+
+.hide {
+  display: none;
 }

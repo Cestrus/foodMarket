@@ -1,0 +1,26 @@
+
+.profile {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.profile__name {
+	display: inline-block;
+	align-self: center;
+	margin-right: 10px;
+	margin-left: 20px;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.profile__img-wrap{
+	width: 30px;
+	height: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
+	cursor: pointer;
+}
+
+.profile__img {
+	width: 100%;
+}

@@ -1,3 +1,10 @@
+.basket {
+  min-width: 50px;
+  display: flex;
+  height: 100%;
+}
+
+
 .basket__img-wrap{
   position: relative;
   width: 40px;

@@ -1,0 +1,17 @@
+
+.sign-in-out {
+	width: 50px;
+	align-self: center;
+}
+
+.sign-in-out__img-wrap{
+	position: relative;
+	width: 40px;
+	height: 40px;
+	margin: auto 0 auto auto;
+	cursor: pointer;
+}
+
+.sign-in-out__img {
+	width: 100%;
+}

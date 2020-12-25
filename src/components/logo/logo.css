@@ -1,3 +1,9 @@
+.logo {
+  min-width: 100px;
+  display: flex;
+  height: 100%;
+}
+
 .logo__img-wrap {
   height: 75%;
   margin: auto 0;

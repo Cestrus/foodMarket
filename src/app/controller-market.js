@@ -15,6 +15,7 @@ export class ControllerMarket {
 	constructor() {
 		this.model = new ModelMarket();
 		this.view = new ViewMarket();
+		this.basket = new Basket();
 
 
 	}
