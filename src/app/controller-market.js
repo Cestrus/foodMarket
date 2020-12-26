@@ -4,6 +4,7 @@ import ViewMarket from './view-market.js';
 import Header from "../components/header/header.js";
 import Search from '../components/search/search.js';
 import Aside from "../components/aside/aside.js";
+import Pagin from "../components/pagin/pagin.js";
 import Plate from "../components/plate/plate.js";
 import Footer from "../components/footer/footer.js";
 
@@ -22,7 +23,7 @@ export class ControllerMarket {
 	}
 
 	start(){
-		this.view.renderPage( Header(), Search(), Aside(), Plate(), Footer());
+		this.view.renderPage( Header(), Search(), Pagin(), Aside(), Plate(), Footer());
 		this.view.createDOM();
 		this.view.addListeners();
 		this.model.initDatabase(dataFromFirebase);

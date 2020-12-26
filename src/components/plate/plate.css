@@ -7,11 +7,9 @@
 .plate-container {
   display: grid;
   gap: 2vw;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-rows: 1fr 1fr;
   height: 100%;
-  border-bottom: 2px solid black;
-  box-sizing: border-box;
 }
 
 .plate-container::before, .plate-container::after  {

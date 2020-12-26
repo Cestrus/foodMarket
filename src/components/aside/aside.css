@@ -18,7 +18,7 @@
   margin-bottom: 20px;
 }
 
-.sort-by__price, .sort-by__name {
+.sort-by__price, .sort-by__name, .sort-by__sale {
   margin: 10px 0 10px 0;
   cursor: pointer;
 }

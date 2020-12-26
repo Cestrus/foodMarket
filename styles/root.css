@@ -13,8 +13,9 @@ body {
   grid-template-areas: 'header header'
                         'search search'
                         'aside main'
+                        'aside pagin'
                         'footer footer';
-  grid-template-rows: 100px 70px 1fr 50px;
+  grid-template-rows: 100px 70px 1fr 50px 50px;
   grid-template-columns: 250px calc(100% - 250px);
   margin: 0 100px;
   height: 100%;
@@ -38,6 +39,10 @@ body {
 
 .aside {
   grid-area: aside;
+}
+
+.pagin {
+  grid-area: pagin;
 }
 
 .hidden {
