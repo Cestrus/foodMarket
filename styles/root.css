@@ -11,9 +11,10 @@ body {
 #root {
   display: grid;
   grid-template-areas: 'header header'
+                        'search search'
                         'aside main'
                         'footer footer';
-  grid-template-rows: 100px 1fr 50px;
+  grid-template-rows: 100px 70px 1fr 50px;
   grid-template-columns: 250px calc(100% - 250px);
   margin: 0 100px;
   height: 100%;
@@ -27,6 +28,10 @@ body {
   grid-area: footer;
 }
 
+.search {
+  grid-area: search;
+}
+
 .plate {
   grid-area: main;
 }
@@ -36,9 +41,9 @@ body {
 }
 
 .hidden {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }

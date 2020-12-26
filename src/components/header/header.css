@@ -24,17 +24,6 @@
   margin: auto auto auto 0;
 }
 
-.search {
-  width: calc(70% - 300px);
-  align-self: center;
-  display: flex;
-  justify-content: flex-end;
-}
 
-.inp-search {
-  display: inline-block;
-  padding: 5px;
-  margin-right: 50px;
-  height: 30px;
-  width: 250px;
-}
+
+

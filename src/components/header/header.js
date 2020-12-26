@@ -8,9 +8,6 @@ const Header = () => {
 		<header class="header">
 			${ Logo() }
       <div class="title"><p>HEALTHY FOOD FOR YOU</p></div>
-      <div class="search">
-        <input type="text" placeholder="search" class="inp-search">
-      </div>
       ${ BasketIcon() }
       ${ Authorization() }
     </header>

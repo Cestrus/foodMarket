@@ -21,12 +21,18 @@ export class ViewMarket {
 		this.DOM.btn_buy.addEventListener('click', () => console.log('click btn'));
 		this.DOM.basket.addEventListener('click', () => console.log('click basket'));
 		this.DOM.search.addEventListener('click', () => console.log('click search'));
-		this.DOM.sort_by_price.addEventListener('click', () => console.log('click sort'));
+		this.DOM.sort_by_price.addEventListener('click', () => {
+			fetch('https://spreadsheets.google.com/feeds/cells/1PXorfz2O2NqH-FcW0nA-HhmtZMmSSwgHheifWc0e1tU/2/public/full?alt=json')
+				// .then(res => res.json())
+				// .then(data => console.log(data.feed.entry))
+			.then(res => console.log(res))
+		});
 
 	}
 
-	renderPage(header, aside, plateContent, footer){
+	renderPage(header, search, aside, plateContent, footer){
 		this.renderHeader(header);
+		this.renderSearch(search);
 		this.renderAside(aside);
 		this.renderPlate(plateContent);
 		this.renderFooter(footer);
@@ -48,8 +54,12 @@ export class ViewMarket {
 		this.root.innerHTML += footer;
 	}
 
+	renderSearch(search){
+		this.root.innerHTML += search;
+	}
+
 	renderBasketPage(){
-s
+
 	}
 
 }

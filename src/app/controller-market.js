@@ -2,12 +2,13 @@ import ModelMarket from './model-market.js';
 import ViewMarket from './view-market.js';
 
 import Header from "../components/header/header.js";
+import Search from '../components/search/search.js';
 import Aside from "../components/aside/aside.js";
 import Plate from "../components/plate/plate.js";
 import Footer from "../components/footer/footer.js";
 
 import Basket from '../components/basket/basket.js';
-
+import { dataFromFirebase } from '../services/init-firebase.js';
 
 
 
@@ -21,11 +22,16 @@ export class ControllerMarket {
 	}
 
 	start(){
-		this.view.renderPage( Header(), Aside(), Plate(), Footer());
+		this.view.renderPage( Header(), Search(), Aside(), Plate(), Footer());
 		this.view.createDOM();
 		this.view.addListeners();
-		console.log('controller', this.view.DOM)
+		this.model.initDatabase(dataFromFirebase);
+		this.model.loadData();
+		// console.log('controller', this.view.DOM)
 	}
+
+
+
 
 
 
