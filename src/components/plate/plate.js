@@ -1,18 +1,13 @@
 import Card from '../card/card.js';
 
 
-const Plate = ( props ) => {
-	const renderCard = () => {
-		return Card(props);
-	}
+const PlateContainer = ( props ) => {
 
-	return `
-		<main class="plate">
-      <div class="plate-container">
-      ${ renderCard() }
-      </div>
-    </main>
+  return `
+		<div class="plate">
+      ${ Card() }
+    </div>
 	`
 }
 
-export default Plate;
+export default PlateContainer;

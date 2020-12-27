@@ -27,42 +27,10 @@ export class ViewMarket {
 
 	}
 
-	renderPage(header, search, pagin, aside, plateContent, footer){
-		this.renderHeader(header);
-		this.renderSearch(search);
-		this.renderAside(aside);
-		this.renderPlate(plateContent);
-		this.renderPagin(pagin);
-		this.renderFooter(footer);
+	renderMainContent(content){
+			this.root.innerHTML = content;
 	}
 
-	renderHeader(header){
-		this.root.innerHTML += header;
-	}
-
-	renderAside(aside){
-		this.root.innerHTML += aside;
-	}
-
-	renderPlate(plateContent){
-		this.root.innerHTML += plateContent;
-	}
-
-	renderFooter(footer){
-		this.root.innerHTML += footer;
-	}
-
-	renderSearch(search){
-		this.root.innerHTML += search;
-	}
-
-	renderPagin(pagin){
-		this.root.innerHTML += pagin;
-	}
-
-	renderBasketPage(){
-
-	}
 
 }
 

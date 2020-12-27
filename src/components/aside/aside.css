@@ -1,7 +1,5 @@
 .aside {
   min-height: calc(100% - 150px);
-  border-bottom: 2px solid black;
-  box-sizing: border-box;
   font-size: 1.3rem;
   font-style: italic;
   font-weight: bold;

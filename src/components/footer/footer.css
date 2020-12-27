@@ -1,6 +1,7 @@
 .footer {
   display: flex;
   justify-content: space-between;
+  border-top: 2px solid black;
   box-sizing: border-box;
   font-size: 15px;
 }
@@ -9,6 +10,6 @@
   font-family: Verdana, Arial, sans-serif;
   font-weight: bold;
   font-size: 15px;
-  line-height: 50px;
+  line-height: 48px;
   margin-right: 0;
 }

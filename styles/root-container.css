@@ -8,16 +8,17 @@ body {
   background-repeat: no-repeat;
 }
 
-#root {
+.root-container {
   display: grid;
   grid-template-areas: 'header header'
-                        'search search'
+                        'aside search'
                         'aside main'
                         'aside pagin'
                         'footer footer';
-  grid-template-rows: 100px 70px 1fr 50px 50px;
-  grid-template-columns: 250px calc(100% - 250px);
-  margin: 0 100px;
+  grid-template-rows: 100px 70px 1fr 70px 50px;
+  grid-template-columns: 200px 1fr;
+  padding: 0 100px;
+  width: calc(100% - 200px);
   height: 100%;
 }
 
@@ -29,11 +30,7 @@ body {
   grid-area: footer;
 }
 
-.search {
-  grid-area: search;
-}
-
-.plate {
+.main-component {
   grid-area: main;
 }
 
@@ -41,7 +38,11 @@ body {
   grid-area: aside;
 }
 
-.pagin {
+.search {
+  grid-area: search;
+}
+
+.pagin-wrap {
   grid-area: pagin;
 }
 
