@@ -1,0 +1,34 @@
+.search {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.search-container {
+	height: 80%;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+}
+
+.search-container label {
+	font-size: 15px;
+	font-weight: bold;
+	font-style: italic;
+	margin: 5px;
+}
+
+/*.inp-search {*/
+/*	height: 16px;*/
+/*}*/
+
+.search-product, .search-category {
+	padding: 5px;
+	font-size: 1rem;
+}
+
+.search-category {
+	margin-right: 10px;
+}

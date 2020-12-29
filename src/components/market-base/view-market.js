@@ -20,7 +20,7 @@ export class ViewMarket {
 	addListeners(){
 		this.DOM.btn_buy.addEventListener('click', () => console.log('click btn'));
 		this.DOM.basket.addEventListener('click', () => console.log('click basket'));
-		this.DOM.search.addEventListener('click', () => console.log('click search'));
+		// this.DOM.search.addEventListener('click', () => console.log('click search'));
 		this.DOM.sort_by_price.addEventListener('click', () => { console.log('click sort price')	});
 		this.DOM.sort_by_name.addEventListener('click', () => { console.log('click sort name')	});
 		this.DOM.sort_by_sale.addEventListener('click', () => { console.log('click sort sale')	});

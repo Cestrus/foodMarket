@@ -1,0 +1,17 @@
+
+.card__sale {
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 80px;
+  background-color: coral;
+  top: 20px;
+  right: -10px;
+  font-style: italic;
+  font-size: 100%;
+  font-weight: bold;
+  text-align: center;
+  line-height: 18px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}

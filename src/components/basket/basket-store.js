@@ -1,7 +1,7 @@
 
 let instance = null;
 
-class Basket {
+class BasketStore {
 	constructor() {
 		if (instance) {
 			return instance;
@@ -37,4 +37,4 @@ class Basket {
 	}
 }
 
-export default Basket;
+export default BasketStore;

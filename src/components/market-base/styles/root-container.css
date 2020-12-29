@@ -6,6 +6,7 @@ body {
   background-image: url(https://i.pinimg.com/originals/33/cb/7c/33cb7c366d3115523fcd9123aaaa2ce1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .root-container {
@@ -13,9 +14,9 @@ body {
   grid-template-areas: 'header header'
                         'aside search'
                         'aside main'
-                        'aside pagin'
+                        'aside pagination'
                         'footer footer';
-  grid-template-rows: 100px 70px 1fr 70px 50px;
+  grid-template-rows: 100px 100px 1fr 70px 50px;
   grid-template-columns: 200px 1fr;
   padding: 0 100px;
   width: calc(100% - 200px);
@@ -42,8 +43,8 @@ body {
   grid-area: search;
 }
 
-.pagin-wrap {
-  grid-area: pagin;
+.pagination-wrap {
+  grid-area: pagination;
 }
 
 .hidden {

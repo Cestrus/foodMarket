@@ -1,21 +1,23 @@
+import Sale from './sale/sale.js';
 
-const Card = () => {
-	// const {img, price} = prop;
-
-	return `
-		<div class="card-container">
-      <div class="item__img-wrap">
-        <img src= ${ 'https://st2.depositphotos.com/1177973/6616/i/600/depositphotos_66162528-stock-photo-metal-shopping-basket-with-groceries.jpg' } alt="food" class="item__img">
-      </div>
-      <div class="item__description">
-        <p class="item__title">Sweety pepper</p>
-        <button class="btn-buy">BUY</button>
-        <div class="item__price-container">
-          <p class="item__price">${ 123.34 } грн/<span>кг</span></p>
+const Card = (props) => {
+  return (
+    `
+  		<div class="card-container" data-id="${props.ID}">
+        <div class="item__img-wrap">
+          <img src= ${props.IMG_LINK} alt="food" class="item__img">
         </div>
+        <div class="item__description">
+          <p class="item__title">${props.PRODUCT_NAME}</p>
+          <button class="btn-buy">BUY</button>
+          <div class="item__price">
+            <p>${ props.PRICE } grn/${props.UNITS}</p>
+          </div>
+        </div>
+        ${props.SALE? Sale(props.SALE) : ''}
       </div>
-    </div>
-	`
+    `
+  )
 }
 
 export default Card;
