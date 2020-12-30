@@ -2,15 +2,8 @@
 @import './normolize.css';
 @import '../src/components/market-base/styles/root-container.css';
 @import "../src/components/market-base/styles/main-market-base.css";
-
-
-/*@import '../src/components/market-base/styles/header/header.css';*/
-/*@import '../src/components/market-base/styles/footer/footer.css';*/
-/*@import '../src/components/market-base/styles/aside/aside.css';*/
-
-
-@import '../src/components/bar/plate.css';
 @import '../src/components/search/styles/search.css';
-@import '../src/components/pagination/pagin.css';
+@import '../src/components/bar/styles/bar.css';
+@import '../src/components/pagination/styles/pagination.css';
 
 

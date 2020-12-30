@@ -2,36 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c70526cb-7d8f-4675-a4ff-9fef1b0ad495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/bar/plate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/market-base/controller-market.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/market-base/model-market.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/market-base/styles/main-market-base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/search/styles/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pagination/styles/pagination.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/controller-market.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/model-market.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/view-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/view-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/aside/aside.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/aside/aside.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/basket/basket.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/authorization.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/header/autorization/authorization.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/basket-icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/header/basket-icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/header/autorization/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/sign-in-out.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/header/autorization/sign-in-out.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/logo/logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/logo/logo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagin/pagin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/pagin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagin/pagin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/pagin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/plate/plate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/plate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/plate/plate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bar/plate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/bar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bar/plate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/sale/sale.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/sale.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/controller-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/controller-market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/model-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/model-market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/view-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/view-market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination/pagin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination/pagin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/controller-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/controller-search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/view-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/view-search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/root-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +55,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SoftServe\indi\foodMarket\src\components\pagination" />
+      <recent name="D:\SoftServe\indi\foodMarket\src\components\pagination\styles" />
+      <recent name="D:\SoftServe\indi\foodMarket\src\components\bar\styles" />
       <recent name="D:\SoftServe\indi\foodMarket\src\components\search\styles" />
       <recent name="D:\SoftServe\indi\foodMarket\src\components\market-base\styles\header\autorization" />
-      <recent name="D:\SoftServe\indi\foodMarket\src\components\market-base\styles" />
-      <recent name="D:\SoftServe\indi\foodMarket\src\components\card" />
-      <recent name="D:\SoftServe\indi\foodMarket\src\components\market-base" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -89,7 +77,8 @@
       <workItem from="1609158604946" duration="663000" />
       <workItem from="1609173219543" duration="601000" />
       <workItem from="1609182385352" duration="4008000" />
-      <workItem from="1609224735497" duration="9752000" />
+      <workItem from="1609224735497" duration="35879000" />
+      <workItem from="1609313551469" duration="14447000" />
     </task>
     <servers />
   </component>

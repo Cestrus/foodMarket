@@ -16,7 +16,7 @@ body {
                         'aside main'
                         'aside pagination'
                         'footer footer';
-  grid-template-rows: 100px 100px 1fr 70px 50px;
+  grid-template-rows: 100px 100px 1fr 100px 50px;
   grid-template-columns: 200px 1fr;
   padding: 0 100px;
   width: calc(100% - 200px);

@@ -1,0 +1,27 @@
+
+.pagination {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-pag {
+	width: 50px;
+	height: 60%;
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+.fas {
+	font-size: 30px;
+	font-weight: normal;
+}
+.btn-pag__prev {
+
+}
+
+.btn-pag__next {
+
+}

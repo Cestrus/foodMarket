@@ -3,9 +3,7 @@ export class ModelMarket {
 	constructor() {
 		this.db = null;
 		this.store = null; // array
-		this.page = 1;
 	}
-	// link = 'https://spreadsheets.google.com/feeds/cells/1PXorfz2O2NqH-FcW0nA-HhmtZMmSSwgHheifWc0e1tU/2/public/full?alt=json';
 
 	initDatabase(dataFromFirebase){
 		this.db = dataFromFirebase;
@@ -19,13 +17,13 @@ export class ModelMarket {
 					this.store = product.data().products;
 				});
 				return this.store;
-			})
+			});
 	}
 
 	loadProductsFromStore(page = 1, step = 20){
-		this.page = page;
-		return this.store.slice((this.page - 1) * step, this.page * step);
+		return this.store.slice((page - 1) * step, page * step);
 	}
+
 
 	sortByPrice(){
 		return this.store.sort((a, b) => {

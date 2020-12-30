@@ -14,8 +14,8 @@ export class ControllerSearch {
 		this.model.initDatabase(dataFromFirebase);
 		this.model.loadCategoriesFromDB()
 		.then(categories => {
-			console.log('cont search', categories)
 			this.view.renderSearchBar(categories);
+			this.view.addListeners();
 		})
 	}
 
