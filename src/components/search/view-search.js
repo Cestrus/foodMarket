@@ -7,7 +7,7 @@ class ViewSearch {
 		this.container.innerHTML =
 			`<div class="search-container">
         <label for="">Search by category</label>
-        <select name="" id="" class="sel-search search-category">
+        <select name="" id="" class="sel-search search-category" >
 					${this.renderOptions(categories)}
         </select>
       </div>
@@ -18,7 +18,7 @@ class ViewSearch {
 	}
 
 	renderOptions(categories){
-		return categories.map(ctg => `<option>${ctg}</option>` ).join('');
+		return `<option></option>` + categories.map(ctg => `<option>${ctg}</option>` ).join('');
 	}
 
 	addListeners() {

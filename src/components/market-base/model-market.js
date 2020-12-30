@@ -35,7 +35,7 @@ export class ModelMarket {
 		return this.store.sort((a, b) => b['SALE'] - a['SALE']);
 	}
 
-	sortByCategories(categories){
+	searchByCategories(categories){
 		return this.store.filter(prod => prod['CATEGORIES'] === categories);
 	}
 

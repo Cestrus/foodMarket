@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c70526cb-7d8f-4675-a4ff-9fef1b0ad495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/pagination/styles/pagination.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bar/plate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/bar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bar/plate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/sale/sale.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/sale.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/market-base/controller-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/controller-market.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/market-base/model-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/model-market.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/market-base/view-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/view-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination/pagin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination/pagin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/controller-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/controller-search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/search.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/search/view-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/view-search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +64,7 @@
       <workItem from="1609173219543" duration="601000" />
       <workItem from="1609182385352" duration="4008000" />
       <workItem from="1609224735497" duration="35879000" />
-      <workItem from="1609313551469" duration="14447000" />
+      <workItem from="1609313551469" duration="17432000" />
     </task>
     <servers />
   </component>
