@@ -42,6 +42,11 @@
   height: 30%;
   text-align: center;
   margin: 0.5rem 0.3rem 0 0.3rem;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 10px;
 }
 
 .item__price {
@@ -49,6 +54,15 @@
   display: flex;
   font-size: 120%;
   margin: auto;
+}
+.btn-details{
+  align-self: center;
+  display: inline-block;
+  width: 60%;
+  height: 20%;
+  font-style: italic;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .btn-buy {

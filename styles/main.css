@@ -5,5 +5,6 @@
 @import '../src/components/search/styles/search.css';
 @import '../src/components/bar/styles/bar.css';
 @import '../src/components/pagination/styles/pagination.css';
+@import '../src/components/details/details.css';
 
 

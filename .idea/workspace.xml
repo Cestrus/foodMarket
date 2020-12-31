@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c70526cb-7d8f-4675-a4ff-9fef1b0ad495" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/market-base/model-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/model-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/view-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/view-search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bar/controller-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/controller-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bar/styles/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bar/view-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/view-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/card.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/sale/sale.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +44,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SoftServe\indi\foodMarket\src\components\bar\styles" />
+      <recent name="D:\SoftServe\indi\foodMarket\src\components\card\styles" />
       <recent name="D:\SoftServe\indi\foodMarket\src\components\pagination" />
       <recent name="D:\SoftServe\indi\foodMarket\src\components\pagination\styles" />
-      <recent name="D:\SoftServe\indi\foodMarket\src\components\bar\styles" />
       <recent name="D:\SoftServe\indi\foodMarket\src\components\search\styles" />
-      <recent name="D:\SoftServe\indi\foodMarket\src\components\market-base\styles\header\autorization" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -64,7 +67,8 @@
       <workItem from="1609173219543" duration="601000" />
       <workItem from="1609182385352" duration="4008000" />
       <workItem from="1609224735497" duration="35879000" />
-      <workItem from="1609313551469" duration="17432000" />
+      <workItem from="1609313551469" duration="21321000" />
+      <workItem from="1609406623783" duration="3835000" />
     </task>
     <servers />
   </component>

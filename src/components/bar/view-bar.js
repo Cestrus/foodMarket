@@ -1,8 +1,10 @@
 
 class ViewBar {
-	constructor() {
+	constructor( notify ) {
 		this.container = document.querySelector('.main-component');
-		this.container.addEventListener('click', this.buyProductListener.bind(this));
+		this.container.addEventListener('click', this.cardClickListener.bind(this));
+
+		this.notify = notify;
 	}
 
 	renderBar(products) {
@@ -15,13 +17,14 @@ class ViewBar {
 
 	renderCard(product) {
 		return `
-			<div class="card-container" data-id="${product.ID}">
+			<div class="card-container" >
         <div class="item__img-wrap">
           <img src= ${product.IMG_LINK} alt="food" class="item__img">
         </div>
         <div class="item__description">
           <p class="item__title">${product.PRODUCT_NAME}</p>
-          <button class="btn-buy">BUY</button>
+          <button class="btn-details" data-id="${product.ID}">details</button>
+          <button class="btn-buy" data-id="${product.ID}">BUY</button>
           <div class="item__price">
             <p>${ product.PRICE } grn/${product.UNITS}</p>
           </div>
@@ -38,9 +41,11 @@ class ViewBar {
     `
 	}
 
-	buyProductListener(ev){
+	cardClickListener(ev){
 		if (ev.target.classList.contains('btn-buy')){
-			console.log('click', ev);
+			this.notify('BUY_PRODUCT', ev.target.getAttribute('data-id'));
+		} else if (ev.target.classList.contains('btn-details')){
+			this.notify('SHOW_DETAILS', ev.target.getAttribute('data-id'));
 		}
 
 	}

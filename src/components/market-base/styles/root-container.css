@@ -1,6 +1,4 @@
 body {
-  display: flex;
-  justify-content: center;
   font-family: Verdana, Arial, sans-serif;
   font-size: 10px;
   height: 100vh;
@@ -22,6 +20,7 @@ body {
   grid-template-columns: 200px 1fr;
   width: 80%;
   height: 100%;
+  margin: auto;
 }
 
 .header {

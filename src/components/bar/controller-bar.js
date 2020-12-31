@@ -3,13 +3,13 @@ import ModelBar from "./model-bar.js";
 
 
 export class ControllerBar {
-	constructor( pubMethods ) {
-		this.pubMethods = pubMethods;
+	constructor( {notify, subscribe} ) {
+		this.notify = notify;
+		this.subscribe = subscribe;
 		this.model = new ModelBar();
-		this.view = new ViewBar();
+		this.view = new ViewBar(this.notify);
 
-		this.pubMethods.subscribe('GET_PAGE_PRODUCT', this.renderBar.bind(this));
-
+		this.subscribe('GET_PAGE_PRODUCT', this.renderBar.bind(this));
 	}
 
 	renderBar(products) {
