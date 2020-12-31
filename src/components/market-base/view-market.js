@@ -1,12 +1,15 @@
 export class ViewMarket {
-	constructor() {
+	constructor(notify) {
+		this.notify = notify;
 		this.root = document.querySelector('#root');
+
+		this.createDOM();
+		this.addListeners();
 	}
 
 	createDOM(){
 		this.DOM = {
 			sort_by_price: document.querySelector('.sort-by__price'),
-			sort_by_name: document.querySelector('.sort-by__name'),
 			sort_by_sale: document.querySelector('.sort-by__sale'),
 			basket: document.querySelector('.basket__img-wrap'),
 			signInOut: document.querySelector('.signInOut'),
@@ -16,9 +19,8 @@ export class ViewMarket {
 
 	addListeners(){
 		this.DOM.basket.addEventListener('click', () => console.log('click basket'));
-		this.DOM.sort_by_price.addEventListener('click', () => { console.log('click sort price')	});
-		this.DOM.sort_by_name.addEventListener('click', () => { console.log('click sort name')	});
-		this.DOM.sort_by_sale.addEventListener('click', () => { console.log('click sort sale')	});
+		this.DOM.sort_by_price.addEventListener('click', () => this.notify('SORT_BY_PRICE'));
+		this.DOM.sort_by_sale.addEventListener('click', () => this.notify('SORT_BY_SALE'));
 
 	}
 

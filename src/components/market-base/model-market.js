@@ -26,22 +26,20 @@ export class ModelMarket {
 
 
 	sortByPrice(){
-		return this.store.sort((a, b) => {
-			return a['PRICE'] - b['PRICE'];
-		});
+		this.store.sort((a, b) => a.PRICE - b.PRICE);
 	}
 
 	sortBySale(){
-		return this.store.sort((a, b) => b['SALE'] - a['SALE']);
+		this.store.sort((a, b) => b.SALE - a.SALE);
 	}
 
 	searchByCategories(categories){
-		return this.store.filter(prod => prod['CATEGORIES'] === categories);
+		return this.store.filter(prod => prod.CATEGORIES === categories);
 	}
 
 	findProduct(name){
 		if (name.length >= 3){
-			return this.store.filter(name => prod['PRODUCT_NAME'].find(name))
+			return this.store.filter(name => prod.PRODUCT_NAME.find(name))
 		}
 	}
 

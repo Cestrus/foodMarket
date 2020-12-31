@@ -2,14 +2,15 @@ import { ModelPagination } from './model-pagination.js';
 import { ViewPagination } from './view-pagination.js';
 
 export class ControllerPagination {
-	constructor( pubMethods ){
+	constructor({ notify, subscribe }) {
 		this.model = new ModelPagination();
 		this.view = new ViewPagination();
-		this.pubMethods = pubMethods;
+		this.notify = notify;
+		this.subscribe = subscribe;
 		this.renderPagination();
 		this.addListeners();
 
-		this.pubMethods.subscribe('LOADED_PRODUCTS', this.countPages.bind(this));
+		this.subscribe('LOADED_PRODUCTS', this.countPages.bind(this));
 	}
 
 	renderPagination(){
@@ -22,11 +23,11 @@ export class ControllerPagination {
 
 	changePage(isNext){
 		this.model.changePage(isNext);
-		this.pubMethods.notify('CHANGE_PAGE', this.model.currPage);
+		this.notify('CHANGE_PAGE', this.model.currPage);
 	}
 
 	countPages(count){
 		this.model.countPages(count);
-		this.pubMethods.notify('CHANGE_PAGE', this.model.currPage);
+		this.notify('CHANGE_PAGE', this.model.currPage);
 	}
 }

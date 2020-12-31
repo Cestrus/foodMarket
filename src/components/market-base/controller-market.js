@@ -7,13 +7,15 @@ import { dataFromFirebase } from '../../services/init-firebase.js';
 
 
 export class ControllerMarket {
-	constructor(pubMethods) {
-		this.pubMethods = pubMethods;
+	constructor({ notify, subscribe }) {
+		this.notify = notify;
+		this.subscribe = subscribe;
 		this.model = new ModelMarket();
-		this.view = new ViewMarket();
+		this.view = new ViewMarket( notify );
 		// this.basket = new BasketStore();
-		this.pubMethods.subscribe('CHANGE_PAGE', this.getProductForPage.bind(this));
-		this.pubMethods.subscribe()
+		this.subscribe('CHANGE_PAGE', this.getProductForPage.bind(this));
+		this.subscribe('SORT_BY_PRICE', this.sortByPrice.bind(this))
+		this.subscribe('SORT_BY_SALE', this.sortBySale.bind(this))
 
 
 
@@ -25,14 +27,25 @@ export class ControllerMarket {
 		this.model.loadDataFromDB()
 		.then(products => {
 			this.model.sortBySale();
-			this.pubMethods.notify('LOADED_PRODUCTS', products.length);
+			this.notify('LOADED_PRODUCTS', products.length);
 		})
-
 	}
 
 	getProductForPage(page) {
 		const products = this.model.loadProductsFromStore(page);
-		this.pubMethods.notify('GET_PAGE_PRODUCT', products)
+		this.notify('GET_PAGE_PRODUCT', products)
+	}
+
+	sortByPrice(){
+		this.model.sortByPrice();
+		const products = this.model.loadProductsFromStore();
+		this.notify('GET_PAGE_PRODUCT', products)
+	}
+
+	sortBySale(){
+		this.model.sortBySale();
+		const products = this.model.loadProductsFromStore();
+		this.notify('GET_PAGE_PRODUCT', products)
 	}
 
 
