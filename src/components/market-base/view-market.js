@@ -1,6 +1,5 @@
 export class ViewMarket {
 	constructor( activityEvent ) {
-		// this.notify = notify;
 		this.activityEvent = activityEvent;
 		this.root = document.querySelector('#root');
 
@@ -22,9 +21,6 @@ export class ViewMarket {
 		this.DOM.basket.addEventListener('click', () => console.log('click basket'));
 		this.DOM.sort_by_price.addEventListener('click', () => this.activityEvent('SORT_BY_PRICE'));
 		this.DOM.sort_by_sale.addEventListener('click', () => this.activityEvent('SORT_BY_SALE'));
-		// this.DOM.sort_by_sale.addEventListener('click', () => this.notify('SORT_BY_SALE'));
-		// this.DOM.sort_by_sale.addEventListener('click', () => this.notify('SORT_BY_SALE'));
-
 	}
 
 	renderMainContent( content ){

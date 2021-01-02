@@ -1,14 +1,9 @@
 
 export class Details {
-  constructor({subscribe}){
+  constructor(){
     this.container = document.querySelector('.modal-container');
-    // this.overlay = null;
     this.btnExit = null;
     this.store = null;
-    // this.reducer = null;
-    // this.subscribe = subscribe;
-    // this.subscribe('SHOW_DETAILS', this.renderDetails.bind(this));
-    // this.subscribe('GET_PAGE_PRODUCT', this.setStore.bind(this));
     this.listener = null;
 
   }
@@ -71,10 +66,5 @@ export class Details {
   searchProduct( id ){
     return this.store.find(prod => prod.ID === Number(id));
   }
-
-  // initReducer( reducer ){
-  //   this.reducer = reducer;
-  // }
-
 }
 

@@ -1,7 +1,6 @@
 class ViewSearch {
-	constructor( notify ){
+	constructor(){
 		this.container = document.querySelector('.search');
-		this.notify = notify;
 		this.search_category = null;
 		this.search_product = null;
 		this.search_icon = null;
@@ -32,8 +31,6 @@ class ViewSearch {
 	addListeners() {
 		this.search_category.addEventListener('change', () => this.notify('SEARCH_BY_CATEGORY', this.search_category.value));
 		this.search_product.addEventListener('change', () => this.notify('SEARCH_BY_PRODUCT', this.search_product.value))
-		// this.search_category.addEventListener('change', () => this.notify('SEARCH_BY_CATEGORY', this.search_category.value));
-		// this.search_product.addEventListener('change', () => this.notify('SEARCH_BY_PRODUCT', this.search_product.value))
 	}
 
 }

@@ -4,9 +4,9 @@ import ViewSearch from "./view-search.js";
 import { dataFromFirebase } from '../../services/init-firebase.js';
 
 export class ControllerSearch {
-	constructor({ notify }) {
+	constructor() {
 		this.model = new ModelSearch();
-		this.view = new ViewSearch( notify );
+		this.view = new ViewSearch();
 		this.renderSearchBar();
 	}
 
@@ -18,7 +18,5 @@ export class ControllerSearch {
 			this.view.addListeners();
 		})
 	}
-
-
 }
 

@@ -4,7 +4,6 @@ class ViewBar {
 		this.container = document.querySelector('.main-component');
 		this.container.addEventListener('click', this.cardClickListener.bind(this));
 		this.activityEvent = activityEvent;
-		// this.notify = notify;
 	}
 
 	renderBar(products) {
@@ -44,10 +43,8 @@ class ViewBar {
 	cardClickListener(ev){
 		if (ev.target.classList.contains('btn-buy')){
 			this.activityEvent('BUY_PRODUCT', ev.target.getAttribute('data-id'));
-			// this.notify('BUY_PRODUCT', ev.target.getAttribute('data-id'));
 		} else if (ev.target.classList.contains('btn-details')){
 			this.activityEvent('SHOW_DETAILS', ev.target.getAttribute('data-id'));
-			// this.notify('SHOW_DETAILS', ev.target.getAttribute('data-id'));
 		}
 
 	}

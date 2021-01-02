@@ -4,14 +4,9 @@ import ModelBar from "./model-bar.js";
 
 export class ControllerBar {
 	constructor() {
-		// this.notify = notify;
-		// this.subscribe = subscribe;
 		this.model = new ModelBar();
 		this.view = new ViewBar( this.activityEvent.bind( this ));
 		this.reducer = null;
-
-		// this.view = new ViewBar(this.notify);
-		// this.subscribe('GET_PAGE_PRODUCT', this.renderBar.bind(this));
 	}
 
 	renderBar( products ) {
@@ -25,9 +20,5 @@ export class ControllerBar {
 	activityEvent( ...args ){
 		return this.reducer.activityEvent( ...args );
 	}
-
-
-
-
 
 }
