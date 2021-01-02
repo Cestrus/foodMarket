@@ -1,5 +1,5 @@
 export class ViewMarket {
-	constructor(notify) {
+	constructor( notify ) {
 		this.notify = notify;
 		this.root = document.querySelector('#root');
 
@@ -24,7 +24,7 @@ export class ViewMarket {
 
 	}
 
-	renderMainContent(content){
+	renderMainContent( content ){
 			this.root.innerHTML = content;
 	}
 

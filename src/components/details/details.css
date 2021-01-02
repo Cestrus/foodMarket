@@ -2,13 +2,14 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	width: auto;
 
 }
 
 .overlayModal{
 	width: 100%;
 	height: 100%;
-  opacity: 0.5;
+    opacity: 0.5;
 	background-color: black;
 	position: fixed;
 	left: 0;
@@ -44,7 +45,7 @@
 .details-item {
 	display: flex;
 	padding: 10px;
-	
+
 }
 
 .item-name{

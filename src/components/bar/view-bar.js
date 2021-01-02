@@ -3,7 +3,7 @@ class ViewBar {
 	constructor( notify ) {
 		this.container = document.querySelector('.main-component');
 		this.container.addEventListener('click', this.cardClickListener.bind(this));
-
+		this.reducer = null;
 		this.notify = notify;
 	}
 
@@ -43,11 +43,17 @@ class ViewBar {
 
 	cardClickListener(ev){
 		if (ev.target.classList.contains('btn-buy')){
-			this.notify('BUY_PRODUCT', ev.target.getAttribute('data-id'));
+			this.reducer.activityEvent('BUY_PRODUCT', ev.target.getAttribute('data-id'));
+			// this.notify('BUY_PRODUCT', ev.target.getAttribute('data-id'));
 		} else if (ev.target.classList.contains('btn-details')){
-			this.notify('SHOW_DETAILS', ev.target.getAttribute('data-id'));
+			this.reducer.activityEvent('SHOW_DETAILS', ev.target.getAttribute('data-id'));
+			// this.notify('SHOW_DETAILS', ev.target.getAttribute('data-id'));
 		}
 
+	}
+
+	initReducer( reducer ){
+		this.reducer = reducer;
 	}
 }
 

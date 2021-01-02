@@ -1,5 +1,5 @@
 @import './reset.css';
-@import './normolize.css';
+@import './normalize.css';
 @import '../src/components/market-base/styles/root-container.css';
 @import "../src/components/market-base/styles/main-market-base.css";
 @import '../src/components/search/styles/search.css';

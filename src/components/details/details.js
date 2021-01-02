@@ -2,12 +2,15 @@
 export class Details {
   constructor({subscribe}){
     this.container = document.querySelector('.modal-container');
-    this.overlay = null;
+    // this.overlay = null;
     this.btnExit = null;
     this.store = null;
-    this.subscribe = subscribe;    
-    this.subscribe('SHOW_DETAILS', this.renderDetails.bind(this));
-    this.subscribe('GET_PAGE_PRODUCT', this.setStore.bind(this))
+    this.reducer = null;
+    this.subscribe = subscribe;
+    // this.subscribe('SHOW_DETAILS', this.renderDetails.bind(this));
+    // this.subscribe('GET_PAGE_PRODUCT', this.setStore.bind(this));
+    this.listener = null;
+
   }
 
   renderDetails( id ){
@@ -51,13 +54,14 @@ export class Details {
         <button class="btn-exit btn-exit--details">EXIT</button>
       </div>`;
       this.btnExit = document.querySelector('.btn-exit');
-      this.btnExit.addEventListener('click', this.exitHandler.bind(this));
+      this.listener = this.btnExit.addEventListener('click', this.exitHandler.bind(this));
       // document.body.style.overflow = 'hidden';
   }
 
   exitHandler(){
     document.body.style.overflow = 'scroll';
     this.container.innerHTML = '';
+    this.btnExit.removeEventListener( this.btnExit, this.listener );
   }
 
   setStore( products ){
@@ -66,6 +70,10 @@ export class Details {
 
   searchProduct( id ){
     return this.store.find(prod => prod.ID === Number(id));
+  }
+
+  initReducer( reducer ){
+    this.reducer = reducer;
   }
 
 }

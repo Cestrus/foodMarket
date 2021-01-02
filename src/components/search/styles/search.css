@@ -7,6 +7,7 @@
 }
 
 .search-container {
+	position: relative;
 	height: 80%;
 	width: 200px;
 	display: flex;
@@ -20,10 +21,6 @@
 	margin: 5px;
 }
 
-/*.inp-search {*/
-/*	height: 16px;*/
-/*}*/
-
 .search-product, .search-category {
 	padding: 5px;
 	font-size: 15px;
@@ -32,3 +29,20 @@
 .search-category {
 	margin-right: 10px;
 }
+
+/* .search-icon {
+	position: absolute;
+	top: 30px;
+	right: 5px;
+	width: 20px;
+	height: 20px;
+	background-image: url(https://www.svgrepo.com/show/3948/search-magnifier-outline.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	cursor: pointer;
+} */
+
+
+
+

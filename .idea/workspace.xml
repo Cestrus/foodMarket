@@ -5,10 +5,23 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/bar/controller-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/controller-bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bar/styles/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/card.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/bar/view-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/view-bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/card.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card/sale/sale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/details/details.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/details/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/controller-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/controller-market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/model-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/model-market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/header/basket-icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/header/basket-icon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/view-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/view-market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/controller-modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/model-modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination/controller-pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/controller-pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/controller-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/controller-search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/styles/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/styles/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/view-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/view-search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/normolize.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/normalize.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +82,9 @@
       <workItem from="1609224735497" duration="35879000" />
       <workItem from="1609313551469" duration="21321000" />
       <workItem from="1609406623783" duration="3835000" />
+      <workItem from="1609502788316" duration="8879000" />
+      <workItem from="1609520484410" duration="7752000" />
+      <workItem from="1609576967992" duration="716000" />
     </task>
     <servers />
   </component>

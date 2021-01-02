@@ -9,8 +9,9 @@ export class ControllerPagination {
 		this.subscribe = subscribe;
 		this.renderPagination();
 		this.addListeners();
+		this.reducer = null;
 
-		this.subscribe('LOADED_PRODUCTS', this.countPages.bind(this));
+		// this.subscribe('LOADED_PRODUCTS', this.countPages.bind(this));
 	}
 
 	renderPagination(){
@@ -23,11 +24,19 @@ export class ControllerPagination {
 
 	changePage(isNext){
 		this.model.changePage(isNext);
-		this.notify('CHANGE_PAGE', this.model.currPage);
+		this.reducer.activityEvent('CHANGE_PAGE', this.model.currPage);
+		// this.notify('CHANGE_PAGE', this.model.currPage);
 	}
 
 	countPages(count){
 		this.model.countPages(count);
-		this.notify('CHANGE_PAGE', this.model.currPage);
+		this.reducer.activityEvent('CHANGE_PAGE', this.model.currPage);
+		// this.notify('CHANGE_PAGE', this.model.currPage);
 	}
+
+	initReducer( reducer ){
+		this.reducer = reducer;
+	}
+
+
 }

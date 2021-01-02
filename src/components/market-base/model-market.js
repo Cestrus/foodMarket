@@ -9,6 +9,21 @@ export class ModelMarket {
 		this.db = dataFromFirebase;
 	}
 
+	// loadDataFromDB(){
+		// const storeRef = this.db.collection("store");
+		// let query = storeRef.where("CATEGORY", "==", "Dairy, Eggs & Cheese");
+		// console.log('==', query);
+	// 	return this.db.collectionGroup('products').where("CATEGORY", "==", "Dairy, Eggs & Cheese")
+	// 		.get()
+	// 		.then(query => {
+	// 			query.forEach(product => {ss
+	// 				console.log(product.data());
+	// 				this.store = product.data();
+	// 			});
+	// 			return this.store;
+	// 		});
+	// }
+
 	loadDataFromDB(){
 		return this.db.collection("store")
 			.get()
