@@ -3,22 +3,29 @@ import ModelBar from "./model-bar.js";
 
 
 export class ControllerBar {
-	constructor( {notify, subscribe} ) {
-		this.notify = notify;
-		this.subscribe = subscribe;
+	constructor() {
+		// this.notify = notify;
+		// this.subscribe = subscribe;
 		this.model = new ModelBar();
-		this.view = new ViewBar(this.notify);
+		this.view = new ViewBar( this.activityEvent.bind( this ));
+		this.reducer = null;
 
+		// this.view = new ViewBar(this.notify);
 		// this.subscribe('GET_PAGE_PRODUCT', this.renderBar.bind(this));
 	}
 
-	renderBar(products) {
-		this.view.renderBar(products);
+	renderBar( products ) {
+		this.view.renderBar( products );
 	}
 
 	initReducer( reducer ){
 		this.reducer = reducer;
 	}
+
+	activityEvent( ...args ){
+		return this.reducer.activityEvent( ...args );
+	}
+
 
 
 

@@ -5,8 +5,8 @@ export class ControllerPagination {
 	constructor({ notify, subscribe }) {
 		this.model = new ModelPagination();
 		this.view = new ViewPagination();
-		this.notify = notify;
-		this.subscribe = subscribe;
+		// this.notify = notify;
+		// this.subscribe = subscribe;
 		this.renderPagination();
 		this.addListeners();
 		this.reducer = null;

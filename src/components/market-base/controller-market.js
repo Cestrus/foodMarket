@@ -7,11 +7,11 @@ import { dataFromFirebase } from '../../services/init-firebase.js';
 
 
 export class ControllerMarket {
-	constructor({ notify, subscribe }) {
-		this.notify = notify;
-		this.subscribe = subscribe;
+	constructor() {
+		// this.notify = notify;
+		// this.subscribe = subscribe;
 		this.model = new ModelMarket();
-		this.view = new ViewMarket( notify );
+		this.view = new ViewMarket( this.activityEvent.bind(this));
 		this.reducer = null;
 		// this.basket = new BasketStore();
 		// this.subscribe('CHANGE_PAGE', this.getProductForPage.bind(this));
@@ -53,6 +53,10 @@ export class ControllerMarket {
 
 	initReducer( reducer ){
 		this.reducer = reducer;
+	}
+
+	activityEvent( ...args ){
+		return this.reducer.activityEvent( ...args );
 	}
 
 }

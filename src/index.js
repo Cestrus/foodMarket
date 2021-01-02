@@ -17,4 +17,13 @@ const details = new Details( publisher.methods );
 const reducer = new Reducer( market, searchBar, bar, pagination, details );
 
 
+// const market = new ControllerMarket();
+//
+// const searchBar = new ControllerSearch();
+// const bar = new ControllerBar();
+// const pagination = new ControllerPagination();
+// const details = new Details();
+// const reducer = new Reducer( market, searchBar, bar, pagination, details );
+
+
 market.start();

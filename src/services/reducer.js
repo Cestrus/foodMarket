@@ -11,11 +11,11 @@ export class Reducer {
 	}
 
 	initReducer(){
-		this.market.initReducer(this);
+		this.market.initReducer( this );
 		// this.searchBar.initReducer(this);
-		this.bar.initReducer(this);
-		this.pagination.initReducer(this);
-		// this.details.initReducer(this);
+		this.bar.initReducer( this );
+		this.pagination.initReducer( this );
+		// this.details.initReducer( this );
 	}
 
 	activityEvent( actionType, payload ){
@@ -31,7 +31,6 @@ export class Reducer {
 			case 'GET_PAGE_PRODUCT': {
 				this.details.setStore( payload );
 				this.bar.renderBar( payload );
-				this.details.setStore( payload );
 				break;
 			}
 			case 'SORT_BY_PRICE': {
@@ -45,6 +44,9 @@ export class Reducer {
 			case 'SHOW_DETAILS': {
 				this.details.renderDetails( payload );
 				break;
+			}
+			case 'BUY_PRODUCT': {
+				console.log('buy')
 			}
 
 

@@ -20,7 +20,7 @@ class ViewSearch {
         <label for="">Search by product</label>
 				<input type="text" placeholder="search" class="inp-search search-product">
 			</div>`;
-		
+
 		this.search_category = document.querySelector('.search-category');
 		this.search_product = document.querySelector('.search-product');
 	}
@@ -32,6 +32,8 @@ class ViewSearch {
 	addListeners() {
 		this.search_category.addEventListener('change', () => this.notify('SEARCH_BY_CATEGORY', this.search_category.value));
 		this.search_product.addEventListener('change', () => this.notify('SEARCH_BY_PRODUCT', this.search_product.value))
+		// this.search_category.addEventListener('change', () => this.notify('SEARCH_BY_CATEGORY', this.search_category.value));
+		// this.search_product.addEventListener('change', () => this.notify('SEARCH_BY_PRODUCT', this.search_product.value))
 	}
 
 }

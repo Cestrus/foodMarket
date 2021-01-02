@@ -5,8 +5,8 @@ export class Details {
     // this.overlay = null;
     this.btnExit = null;
     this.store = null;
-    this.reducer = null;
-    this.subscribe = subscribe;
+    // this.reducer = null;
+    // this.subscribe = subscribe;
     // this.subscribe('SHOW_DETAILS', this.renderDetails.bind(this));
     // this.subscribe('GET_PAGE_PRODUCT', this.setStore.bind(this));
     this.listener = null;
@@ -72,9 +72,9 @@ export class Details {
     return this.store.find(prod => prod.ID === Number(id));
   }
 
-  initReducer( reducer ){
-    this.reducer = reducer;
-  }
+  // initReducer( reducer ){
+  //   this.reducer = reducer;
+  // }
 
 }
 
