@@ -1,0 +1,133 @@
+@import './basket-icon.css';
+
+.main-basket {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.basket-title{
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.basket-container {
+	display: grid;
+	grid-template-areas: 'name price count total remove';
+						 /*'item item item item item';*/
+	grid-template-rows: 30px;
+	grid-template-columns: 1fr 100px 60px 100px 30px;
+
+	width: 100%;
+	font-size: 15px;
+}
+
+.basket-item-title-name {
+	grid-area: name ;
+}
+
+.basket-item-title-price {
+	grid-area: price;
+}
+
+.basket-item-title-count {
+	grid-area: count;
+}
+
+.basket-item-title-totalPrice {
+	grid-area: total;
+}
+
+.basket-item-title-empty {
+	grid-area: remove;
+	border-bottom: 2px solid black;
+}
+
+.basket-item{
+	/*grid-area: item;*/
+	/*min-width: 100%;*/
+
+}
+
+.basket-item-title-name, .basket-item-title-price, .basket-item-title-count, .basket-item-title-totalPrice {
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	border-bottom: 2px solid black;
+	box-sizing: border-box;
+	line-height: 30px;
+}
+
+.basket-item-name, .basket-item-price, .basket-item-count, .basket-item-totalPrice {
+	height: 40px;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 40px;
+}
+
+.basket-item-name {
+	text-align: left;
+	cursor: pointer;
+}
+
+.basket-item-price {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.basket-item-count {
+	height: 20px;
+	line-height: 40px;
+	margin-top: 5px;
+	padding: 5px;
+}
+
+.basket-item-totalPrice {
+	text-align: left;
+	padding-left: 20px;
+}
+
+.btn-basket-wrap {
+	height: 40px;
+	text-align: right;
+
+}
+
+.btn-basket-exit {
+	height: 30px;
+	width: 80px;
+	font-weight: bold;
+	line-height: 20px;
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+.total-price {
+	width: 100%;
+	height: 50px;
+	font-size: 15px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 50px;
+	text-align: right;
+	padding-right: 100px;
+}
+
+.total-price p {
+	font-weight: bold;
+	text-align: right;
+	font-size: 15px;
+	line-height: 50px;
+	font-style: italic;
+	margin-right: 50px;
+}
+
+.btn-remove-item{
+	height: 30px;
+	font-weight: bold;
+	margin: auto;
+}
+

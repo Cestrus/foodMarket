@@ -1,9 +1,10 @@
 
 class ViewBar {
-	constructor( activityEvent ) {
-		this.container = document.querySelector('.main-component');
+	constructor( activityReducer ) {
+		this.container = document.querySelector('.main-bar');
 		this.container.addEventListener('click', this.cardClickListener.bind(this));
-		this.activityEvent = activityEvent;
+		this.activityReducer = activityReducer;
+		this.bar = null;
 	}
 
 	renderBar(products) {
@@ -12,6 +13,7 @@ class ViewBar {
 				${products.map(product => this.renderCard(product)).join('')}
 			</div>
 		`
+		this.bar = document.querySelector('.bar');
 	}
 
 	renderCard(product) {
@@ -42,13 +44,19 @@ class ViewBar {
 
 	cardClickListener(ev){
 		if (ev.target.classList.contains('btn-buy')){
-			this.activityEvent('BUY_PRODUCT', ev.target.getAttribute('data-id'));
+			this.activityReducer('BUY_PRODUCT', {id: ev.target.getAttribute('data-id')} );
 		} else if (ev.target.classList.contains('btn-details')){
-			this.activityEvent('SHOW_DETAILS', ev.target.getAttribute('data-id'));
+			this.activityReducer('SHOW_DETAILS', ev.target.getAttribute('data-id'));
 		}
-
 	}
 
+	hide(){
+		this.bar.classList.add('hide');
+	}
+
+	visible(){
+		this.bar.classList.remove('hide');
+	}
 
 }
 

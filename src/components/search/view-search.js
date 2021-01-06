@@ -29,8 +29,8 @@ class ViewSearch {
 	}
 
 	addListeners() {
-		this.search_category.addEventListener('change', () => this.notify('SEARCH_BY_CATEGORY', this.search_category.value));
-		this.search_product.addEventListener('change', () => this.notify('SEARCH_BY_PRODUCT', this.search_product.value))
+		this.search_category.addEventListener('change', () => this.activityReducer('SEARCH_BY_CATEGORY', this.search_category.value));
+		this.search_product.addEventListener('change', () => this.activityReducer('SEARCH_BY_PRODUCT', this.search_product.value))
 	}
 
 }

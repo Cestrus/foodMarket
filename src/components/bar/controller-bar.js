@@ -5,7 +5,7 @@ import ModelBar from "./model-bar.js";
 export class ControllerBar {
 	constructor() {
 		this.model = new ModelBar();
-		this.view = new ViewBar( this.activityEvent.bind( this ));
+		this.view = new ViewBar( this.activityReducer.bind( this ));
 		this.reducer = null;
 	}
 
@@ -17,8 +17,15 @@ export class ControllerBar {
 		this.reducer = reducer;
 	}
 
-	activityEvent( ...args ){
-		return this.reducer.activityEvent( ...args );
+	activityReducer( ...args ){
+		return this.reducer.activityReducer( ...args );
 	}
 
+	hide(){
+		this.view.hide();
+	}
+
+	visible(){
+		this.view.visible();
+	}
 }

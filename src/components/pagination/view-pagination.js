@@ -15,5 +15,13 @@ export class ViewPagination {
 		document.querySelector('.btn-pag__next').addEventListener('click', () => nextMethod());
 	}
 
+	hide(){
+		this.container.classList.add('hidden');
+	}
+
+	visible(){
+		this.container.classList.remove('hidden');
+	}
+
 }
 

@@ -4,6 +4,7 @@ import { ControllerBar } from './components/bar/controller-bar.js';
 import { ControllerPagination } from "./components/pagination/controller-pagination.js";
 import { Details } from './components/details/details.js';
 import { Reducer } from './services/reducer.js';
+import { ControllerBasket } from "./components/basket/controller-basket.js";
 
 const market = new ControllerMarket();
 
@@ -11,6 +12,7 @@ const searchBar = new ControllerSearch();
 const bar = new ControllerBar();
 const pagination = new ControllerPagination();
 const details = new Details();
-const reducer = new Reducer( market, searchBar, bar, pagination, details );
+const basket = new ControllerBasket();
+const reducer = new Reducer( market, searchBar, bar, pagination, details, basket );
 
 market.start();

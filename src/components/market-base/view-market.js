@@ -1,6 +1,6 @@
 export class ViewMarket {
-	constructor( activityEvent ) {
-		this.activityEvent = activityEvent;
+	constructor( activityReducer ) {
+		this.activityReducer = activityReducer;
 		this.root = document.querySelector('#root');
 
 		this.createDOM();
@@ -18,9 +18,9 @@ export class ViewMarket {
 	}
 
 	addListeners(){
-		this.DOM.basket.addEventListener('click', () => console.log('click basket'));
-		this.DOM.sort_by_price.addEventListener('click', () => this.activityEvent('SORT_BY_PRICE'));
-		this.DOM.sort_by_sale.addEventListener('click', () => this.activityEvent('SORT_BY_SALE'));
+		this.DOM.basket.addEventListener('click', () =>  this.activityReducer('SHOW_BASKET'));
+		this.DOM.sort_by_price.addEventListener('click', () => this.activityReducer('SORT_BY_PRICE'));
+		this.DOM.sort_by_sale.addEventListener('click', () => this.activityReducer('SORT_BY_SALE'));
 	}
 
 	renderMainContent( content ){

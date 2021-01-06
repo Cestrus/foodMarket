@@ -1,11 +1,19 @@
+let instance = null;
 
 export class Reducer {
-	constructor( market, searchBar, bar, pagination, details ) {
+	constructor( market, searchBar, bar, pagination, details, basket ) {
+		if (instance) {
+			return instance;
+		} else {
+			instance = this;
+		}
+
 		this.market = market;
 		this.searchBar = searchBar;
 		this.bar = bar;
 		this.pagination = pagination;
 		this.details = details;
+		this.basket = basket;
 
 		this.initReducer();
 	}
@@ -15,10 +23,10 @@ export class Reducer {
 		// this.searchBar.initReducer(this);
 		this.bar.initReducer( this );
 		this.pagination.initReducer( this );
-		// this.details.initReducer( this );
+		this.basket.initReducer( this );
 	}
 
-	activityEvent( actionType, payload ){
+	activityReducer( actionType, payload ){
 		switch( actionType ) {
 			case 'LOADED_PRODUCTS': {
 				this.pagination.countPages( payload );
@@ -30,6 +38,7 @@ export class Reducer {
 			}
 			case 'GET_PAGE_PRODUCT': {
 				this.details.setStore( payload );
+				this.basket.setStore( payload );
 				this.bar.renderBar( payload );
 				break;
 			}
@@ -45,8 +54,30 @@ export class Reducer {
 				this.details.renderDetails( payload );
 				break;
 			}
+			case 'SHOW_BASKET': {
+				this.bar.hide();
+				this.basket.showBasket( payload );
+				this.pagination.hide();
+
+				break;
+			}
+			case 'EXIT_BASKET': {
+				this.basket.exitBasket();
+				this.bar.visible();
+				this.pagination.visible();
+				break;
+			}
 			case 'BUY_PRODUCT': {
-				console.log('buy')
+				this.basket.buyProduct( payload );
+				break;
+			}
+			case 'CHANGE_COUNT_PRODUCT': {
+				this.basket.changeCountProduct( payload );
+				break;
+			}
+			case 'REMOVE_PRODUCT': {
+				this.basket.removeProduct( payload );
+				break;
 			}
 
 

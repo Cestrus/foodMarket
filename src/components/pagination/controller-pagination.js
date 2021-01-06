@@ -20,17 +20,24 @@ export class ControllerPagination {
 
 	changePage(isNext){
 		this.model.changePage(isNext);
-		this.reducer.activityEvent('CHANGE_PAGE', this.model.currPage);
+		this.reducer.activityReducer('CHANGE_PAGE', this.model.currPage);
 	}
 
 	countPages(count){
 		this.model.countPages(count);
-		this.reducer.activityEvent('CHANGE_PAGE', this.model.currPage);
+		this.reducer.activityReducer('CHANGE_PAGE', this.model.currPage);
 	}
 
 	initReducer( reducer ){
 		this.reducer = reducer;
 	}
 
+	hide(){
+		this.view.hide();
+	}
+
+	visible(){
+		this.view.visible();
+	}
 
 }
