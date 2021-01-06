@@ -17,7 +17,6 @@
 .basket-container {
 	display: grid;
 	grid-template-areas: 'name price count total remove';
-						 /*'item item item item item';*/
 	grid-template-rows: 30px;
 	grid-template-columns: 1fr 100px 60px 100px 30px;
 
@@ -44,12 +43,6 @@
 .basket-item-title-empty {
 	grid-area: remove;
 	border-bottom: 2px solid black;
-}
-
-.basket-item{
-	/*grid-area: item;*/
-	/*min-width: 100%;*/
-
 }
 
 .basket-item-title-name, .basket-item-title-price, .basket-item-title-count, .basket-item-title-totalPrice {

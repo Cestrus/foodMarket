@@ -5,7 +5,6 @@ class ViewBasket{
 		this.container = document.querySelector('.main-basket');
 		this.activityReducer = activityReducer;
 		this.totalPriceContainer = null;
-		// this.basketContainer = null;
 		this.basketIcon.addEventListener('click', () => this.activityReducer.bind(this, 'EXIT_BASKET'));
 	}
 
