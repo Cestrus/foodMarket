@@ -28,10 +28,13 @@ class ViewBasket{
 
 	renderEmptyBasket() {
 		this.container.innerHTML = `
-			<p class="empty-basket">BASKET IS EMPTY</p>
-			<div class="btn-basket-wrap">
-				<button class="btn-basket-exit">EXIT</button>
+			<div class="empty-basket">
+				<p class="">BASKET IS EMPTY</p>
+				<div class="btn-basket-wrap">
+					<button class="btn-basket-exit">EXIT</button>
+				</div>
 			</div>
+
 		`
 	}
 
@@ -51,7 +54,7 @@ class ViewBasket{
 					<button class="btn-basket-exit">EXIT</button>
 			</div>
 		`
-		document.querySelectorAll('.basket-item-count').forEach(el => el.addEventListener('change', ev => this.activityReducer('CHANGE_COUNT_PRODUCT', { id: ev.target.attributes['data-id'].value, count: ev.target.value})));
+		document.querySelectorAll('.basket-item-count').forEach(el => el.addEventListener('change', ev => this.activityReducer('CHANGE_COUNT_PRODUCT', { id: ev.target.attributes['data-id'].value, count: ev.target.value, max: ev.target.attributes['max'].value})));
 		document.querySelectorAll('.basket-item-name').forEach(el => el.addEventListener('click', ev => this.activityReducer('SHOW_DETAILS', ev.target.attributes['data-id'].value)));
 		document.querySelectorAll('.btn-remove-item').forEach(el => el.addEventListener('click', ev => this.activityReducer('REMOVE_PRODUCT', ev.target.attributes['data-id'].value)));
 		this.totalPriceContainer = document.querySelector('.total-price');
@@ -61,7 +64,7 @@ class ViewBasket{
 		return `
 			<div class="basket-item-name" data-id="${product.ID}">${product.PRODUCT_NAME.toLowerCase()}</div>
 			<div class="basket-item-price" data-id="${product.ID}">${product.PRICE} uah</div>
-			<input class="basket-item-count" type="number" min="0" step="1" value="${product.countInBasket}" data-id="${product.ID}">
+			<input class="basket-item-count" type="number" min="0" step="1" max="${product.AMOUNT}" value="${product.countInBasket}" data-id="${product.ID}">
 			<div class="basket-item-totalPrice" data-id="${product.ID}">${+product.PRICE * product.countInBasket} uah</div>
 			<button class="btn-remove-item" data-id="${product.ID}">X</button>			
 		`

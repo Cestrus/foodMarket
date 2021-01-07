@@ -50,7 +50,6 @@ export class Details {
       </div>`;
       this.btnExit = document.querySelector('.btn-exit');
       this.listener = this.btnExit.addEventListener('click', this.exitHandler.bind(this));
-      // document.body.style.overflow = 'hidden';
   }
 
   exitHandler(){

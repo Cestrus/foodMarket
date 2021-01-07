@@ -18,10 +18,16 @@
 	font-size: 30px;
 	font-weight: normal;
 }
+
 .btn-pag__prev {
 
 }
 
 .btn-pag__next {
+
+}
+
+@media (min-width: 200px) and (max-width: 539px){
+
 
 }

@@ -1,14 +1,12 @@
 class ModelSearch {
-	constructor() {
-	this.categories = null;
+	constructor( setStore, getStore ) {
+		this.categories = null;
+		this.setStore = setStore;
+		this.getStore = getStore;
 	}
 
-	initDatabase(dataFromFirebase) {
-		this.db = dataFromFirebase;
-	}
-
-	loadCategoriesFromDB() {
-		return this.db.collection("store")
+	loadCategoriesFromDB( dataFromFirebase ) {
+		return dataFromFirebase.collection("store")
 		.get()
 		.then(query => {
 			query.forEach(ctg => {
@@ -18,6 +16,15 @@ class ModelSearch {
 			});
 			return this.categories;
 		})
+	}
+
+	searchByCategory( category = null ){
+		if(!category) return this.getStore();
+		return this.getStore().filter(prod => prod.CATEGORIES === categories);
+	}
+
+	searchByProduct( product ){
+		return this.getStore().filter(prod => prod.PRODUCT_NAME.find(product));
 	}
 
 }

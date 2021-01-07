@@ -22,7 +22,7 @@ export class ControllerBasket {
 
 	showBasket(){
 		this.view.renderBasketDetails( this.model.basket );
-		this.view.renderTotalPrice()
+		if( this.model.basket.length ) this.view.renderTotalPrice();
 	}
 
 	exitBasket(){
@@ -34,8 +34,8 @@ export class ControllerBasket {
 		this.view.renderCounter( this.model.counter );
 	}
 
-	changeCountProduct({id, count}){
-		this.view.renderTotalPrice( id, this.model.changeCountProduct(id, count) );
+	changeCountProduct({id, count, max}){
+		this.view.renderTotalPrice( id, this.model.changeCountProduct(id, count, max) );
 		this.view.renderCounter( this.model.counter );
 	}
 

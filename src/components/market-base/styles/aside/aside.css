@@ -1,22 +1,88 @@
-.aside {
-  min-height: calc(100% - 150px);
-  font-size: calc(5px + 1vw);
-  font-style: italic;
-  font-weight: bold;
+@media (min-width: 721px){
+  .aside {
+    min-height: calc(100% - 150px);
+    font-size: calc(5px + 1vw);
+    font-style: italic;
+    font-weight: bold;
+
+  }
+
+  .sort-by-wrap{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    padding-top: 20px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+  }
+
+  .sort-title {
+    margin-bottom: 20px;
+  }
+
+  .sort-by__price, .sort-by__name, .sort-by__sale {
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+  }
 }
 
-.sort-by-wrap{
-  display: flex;
-  flex-direction: column;
-  margin-top: 70px;
-  width: 100%;
+
+@media (min-width: 540px) and (max-width: 720px) {
+  .aside {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    /*position: sticky;*/
+    /*top: 0;*/
+    /*z-index: 20;*/
+  }
+
+  .sort-by-wrap{
+    display: flex;
+    margin-top: 0;
+    width: 100%;
+
+  }
+
+  .sort-title, .sort-by__price, .sort-by__name, .sort-by__sale {
+    width: auto;
+    margin: 20px;
+  }
+
+  .sort-by__price, .sort-by__name, .sort-by__sale {
+    cursor: pointer;
+  }
+
 }
 
-.sort-title {
-  margin-bottom: 20px;
-}
+@media (min-width: 200px) and (max-width: 539px) {
+  .aside {
+    /*min-height: calc(100% - 150px);*/
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    width: 120px;
 
-.sort-by__price, .sort-by__name, .sort-by__sale {
-  margin: 10px 0 10px 0;
-  cursor: pointer;
+  }
+
+  .sort-by-wrap{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding-top: 20px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+  }
+
+  .sort-title {
+    margin-bottom: 20px;
+  }
+
+  .sort-by__price, .sort-by__name, .sort-by__sale {
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+  }
+
 }

@@ -3,20 +3,46 @@ import ViewSearch from "./view-search.js";
 
 import { dataFromFirebase } from '../../services/init-firebase.js';
 
+
 export class ControllerSearch {
-	constructor() {
-		this.model = new ModelSearch();
-		this.view = new ViewSearch();
+	constructor({setStore, getStore}) {
+		this.model = new ModelSearch( setStore, getStore );
+		this.view = new ViewSearch( this.activityReducer.bind(this) );
+		this.reducer = null;
+
 		this.renderSearchBar();
 	}
 
+	initReducer( reducer ){
+		this.reducer = reducer;
+	}
+
+	activityReducer( ...args ){
+		return this.reducer.activityReducer( ...args );
+	}
+
 	renderSearchBar() {
-		this.model.initDatabase( dataFromFirebase );
-		this.model.loadCategoriesFromDB()
+		this.model.loadCategoriesFromDB( dataFromFirebase )
 		.then(categories => {
 			this.view.renderSearchBar( categories );
-			this.view.addListeners();
 		})
 	}
+
+	searchByCategory( category ){
+		this.model.searchByCategory( category );
+	}
+
+	searchByProduct( product ){
+		this.model.searchByProduct( product )
+	}
+
+	hide(){
+		this.view.hide();
+	}
+
+	visible(){
+		this.view.visible();
+	}
+
 }
 

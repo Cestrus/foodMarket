@@ -5,10 +5,12 @@ import { ControllerPagination } from "./components/pagination/controller-paginat
 import { Details } from './components/details/details.js';
 import { Reducer } from './services/reducer.js';
 import { ControllerBasket } from "./components/basket/controller-basket.js";
+import { Store } from "./services/store.js";
 
-const market = new ControllerMarket();
+const store = new Store();
+const market = new ControllerMarket( store.methods );
 
-const searchBar = new ControllerSearch();
+const searchBar = new ControllerSearch( store.methods );
 const bar = new ControllerBar();
 const pagination = new ControllerPagination();
 const details = new Details();

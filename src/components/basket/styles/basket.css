@@ -4,7 +4,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: 100%;
+	height: calc(100vh - 150px);
 }
 
 .basket-title{
@@ -12,6 +12,7 @@
 	font-size: 20px;
 	font-weight: bold;
 	font-style: italic;
+	margin-top: 30px;
 }
 
 .basket-container {
@@ -43,6 +44,7 @@
 .basket-item-title-empty {
 	grid-area: remove;
 	border-bottom: 2px solid black;
+	box-sizing: border-box;
 }
 
 .basket-item-title-name, .basket-item-title-price, .basket-item-title-count, .basket-item-title-totalPrice {
@@ -124,3 +126,9 @@
 	margin: auto;
 }
 
+.empty-basket{
+	font-size: 15px;
+	font-weight: bold;
+	font-style: italic;
+	/*height: calc(100vh - 350px);*/
+}

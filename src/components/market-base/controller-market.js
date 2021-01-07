@@ -1,23 +1,20 @@
 import ModelMarket from './model-market.js';
 import ViewMarket from './view-market.js';
 
-// import BasketStore from '../basket/basket-store.js';
-
 import { dataFromFirebase } from '../../services/init-firebase.js';
 
 
 export class ControllerMarket {
-	constructor() {
-		this.model = new ModelMarket();
+	constructor({setStore, getStore}) {
+		this.model = new ModelMarket( setStore, getStore );
 		this.view = new ViewMarket( this.activityReducer.bind(this));
 		this.reducer = null;
-		// this.basket = new BasketStore();
 
 	}
 
 	start(){
 		this.view.createDOM();
-		this.model.initDatabase(dataFromFirebase);
+		this.model.initDatabase( dataFromFirebase );
 		this.model.loadDataFromDB()
 		.then(products => {
 			this.model.sortBySale();
@@ -25,13 +22,13 @@ export class ControllerMarket {
 		})
 	}
 
-	getProductForPage(page) {
+	getProductForPage( page ) {
 		const products = this.model.loadProductsFromStore(page);
 		this.reducer.activityReducer('GET_PAGE_PRODUCT', products);
 	}
 
-	sortByPrice(){
-		this.model.sortByPrice();
+	sortByPrice( isAZ ){
+		this.model.sortByPrice( isAZ );
 		const products = this.model.loadProductsFromStore();
 		this.reducer.activityReducer('GET_PAGE_PRODUCT', products);
 	}
@@ -48,6 +45,18 @@ export class ControllerMarket {
 
 	activityReducer( ...args ){
 		return this.reducer.activityReducer( ...args );
+	}
+
+	asideHide(){
+		this.view.asideHide();
+	}
+
+	asideVisible(){
+		this.view.asideVisible();
+	}
+
+	tansformRootContainer(){
+		this.view.tansformRootContainer();
 	}
 
 }

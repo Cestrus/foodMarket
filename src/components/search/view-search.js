@@ -1,9 +1,10 @@
 class ViewSearch {
-	constructor(){
+	constructor( activityReducer ){
 		this.container = document.querySelector('.search');
-		this.search_category = null;
-		this.search_product = null;
-		this.search_icon = null;
+		// this.search_category = null;
+		// this.search_product = null;
+		// this.search_icon = null;
+		this.activityReducer = activityReducer;
 
 	}
 
@@ -20,17 +21,20 @@ class ViewSearch {
 				<input type="text" placeholder="search" class="inp-search search-product">
 			</div>`;
 
-		this.search_category = document.querySelector('.search-category');
-		this.search_product = document.querySelector('.search-product');
+		document.querySelector('.search-category').addEventListener('change', ev => this.activityReducer('SEARCH_BY_CATEGORY', ev.target.value));
+		document.querySelector('.search-product').addEventListener('input', ev => this.activityReducer('SEARCH_BY_PRODUCT', ev.target.value));
 	}
 
 	renderOptions( categories ){
 		return `<option></option>` + categories.map(ctg => `<option>${ ctg }</option>` ).join('');
 	}
 
-	addListeners() {
-		this.search_category.addEventListener('change', () => this.activityReducer('SEARCH_BY_CATEGORY', this.search_category.value));
-		this.search_product.addEventListener('change', () => this.activityReducer('SEARCH_BY_PRODUCT', this.search_product.value))
+	hide(){
+		this.container.classList.add('hide');
+	}
+
+	visible(){
+		this.container.classList.remove('hide');
 	}
 
 }

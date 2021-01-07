@@ -5,7 +5,7 @@ class ModelBasket {
 		this.counter = 0;
 	}
 
-	changeCountProduct( id, count = null ){
+	changeCountProduct( id, count = null, max = null ){
 		let product = this.basket.find(prod => prod.ID === +id);
 		if (!product) {
 			product = this.store.find( prod => prod.ID === +id );
@@ -13,13 +13,18 @@ class ModelBasket {
 		}
 		if(!product.countInBasket) {
 			product.countInBasket = 1;
+			this.changeCounter();
 		} else if (!count) {
 			product.countInBasket++;
+			this.changeCounter();
+		} else if (Number(count) < 0) {
+			product.countInBasket = 0;
+		} else if (Number(count) > Number(max)) {
+			product.countInBasket = max;
 		} else {
 			product.countInBasket = Number(count);
-
+			this.changeCounter();
 		}
-		this.changeCounter();
 		return product.PRICE * product.countInBasket;
 	}
 

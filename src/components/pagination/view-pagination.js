@@ -16,11 +16,11 @@ export class ViewPagination {
 	}
 
 	hide(){
-		this.container.classList.add('hidden');
+		this.container.classList.add('hide');
 	}
 
 	visible(){
-		this.container.classList.remove('hidden');
+		this.container.classList.remove('hide');
 	}
 
 }

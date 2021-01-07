@@ -20,7 +20,7 @@ export class Reducer {
 
 	initReducer(){
 		this.market.initReducer( this );
-		// this.searchBar.initReducer(this);
+		this.searchBar.initReducer(this);
 		this.bar.initReducer( this );
 		this.pagination.initReducer( this );
 		this.basket.initReducer( this );
@@ -37,13 +37,13 @@ export class Reducer {
 				break;
 			}
 			case 'GET_PAGE_PRODUCT': {
-				this.details.setStore( payload );
-				this.basket.setStore( payload );
+				this.details.setStore( payload ); //TODO продумать получение данных из общего стора
+				this.basket.setStore( payload ); //TODO продумать получение данных из общего стора
 				this.bar.renderBar( payload );
 				break;
 			}
 			case 'SORT_BY_PRICE': {
-				this.market.sortByPrice();
+				this.market.sortByPrice( payload );
 				break;
 			}
 			case 'SORT_BY_SALE': {
@@ -58,13 +58,18 @@ export class Reducer {
 				this.bar.hide();
 				this.basket.showBasket( payload );
 				this.pagination.hide();
-
+				this.market.asideHide();
+				this.searchBar.hide();
+				this.market.tansformRootContainer();
 				break;
 			}
 			case 'EXIT_BASKET': {
 				this.basket.exitBasket();
 				this.bar.visible();
 				this.pagination.visible();
+				this.market.asideVisible();
+				this.searchBar.visible();
+				this.market.tansformRootContainer();
 				break;
 			}
 			case 'BUY_PRODUCT': {
@@ -77,6 +82,14 @@ export class Reducer {
 			}
 			case 'REMOVE_PRODUCT': {
 				this.basket.removeProduct( payload );
+				break;
+			}
+			case 'SEARCH_BY_CATEGORY': {
+				this.searchBar.searchByCategory( payload );
+				break;
+			}
+			case 'SEARCH_BY_PRODUCT': {
+				console.log(payload);
 				break;
 			}
 

@@ -4,18 +4,28 @@
     <list default="true" id="c70526cb-7d8f-4675-a4ff-9fef1b0ad495" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bar/controller-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/controller-bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/bar/view-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/view-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bar/styles/bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/bar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bar/styles/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bar/styles/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/basket-store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/controller-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/controller-basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/model-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/model-basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/styles/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/styles/basket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/view-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/view-basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/details/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/market-base/controller-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/controller-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/header/basket-icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/styles/basket-icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/model-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/model-market.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/aside/aside.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/aside/aside.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/logo/logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/logo/logo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/styles/root-container.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/market-base/view-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/view-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination/controller-pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/controller-pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination/styles/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/styles/pagination.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pagination/view-pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/view-pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/controller-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/controller-search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/model-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/model-search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/styles/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/styles/search.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/search/view-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/view-search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -82,7 +92,8 @@
       <workItem from="1609666598804" duration="14904000" />
       <workItem from="1609700444709" duration="7284000" />
       <workItem from="1609848037252" duration="13461000" />
-      <workItem from="1609912590243" duration="18189000" />
+      <workItem from="1609912590243" duration="53730000" />
+      <workItem from="1610009398273" duration="6842000" />
     </task>
     <servers />
   </component>
