@@ -10,11 +10,11 @@ import { Store } from "./services/store.js";
 const store = new Store();
 const market = new ControllerMarket( store.methods );
 
-const searchBar = new ControllerSearch( store.methods );
+const searchBar = new ControllerSearch( store.methods  );
 const bar = new ControllerBar();
 const pagination = new ControllerPagination();
-const details = new Details();
-const basket = new ControllerBasket();
+const details = new Details( store.methods  );
+const basket = new ControllerBasket( store.methods );
 const reducer = new Reducer( market, searchBar, bar, pagination, details, basket );
 
 market.start();

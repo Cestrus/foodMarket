@@ -9,7 +9,7 @@ export class ControllerMarket {
 		this.model = new ModelMarket( setStore, getStore );
 		this.view = new ViewMarket( this.activityReducer.bind(this));
 		this.reducer = null;
-
+		console.log('contr market', getStore())
 	}
 
 	start(){

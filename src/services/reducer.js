@@ -37,8 +37,6 @@ export class Reducer {
 				break;
 			}
 			case 'GET_PAGE_PRODUCT': {
-				this.details.setStore( payload ); //TODO продумать получение данных из общего стора
-				this.basket.setStore( payload ); //TODO продумать получение данных из общего стора
 				this.bar.renderBar( payload );
 				break;
 			}

@@ -127,8 +127,9 @@
 }
 
 .empty-basket{
+	margin-top: 30px;
 	font-size: 15px;
 	font-weight: bold;
 	font-style: italic;
-	/*height: calc(100vh - 350px);*/
+	height: calc(100vh - 350px);
 }

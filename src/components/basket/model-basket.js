@@ -1,14 +1,14 @@
 class ModelBasket {
-	constructor() {
+	constructor( getStore ) {
 		this.basket = [];
-		this.store = null; // products on page
 		this.counter = 0;
+		this.getStore = getStore;
 	}
 
 	changeCountProduct( id, count = null, max = null ){
 		let product = this.basket.find(prod => prod.ID === +id);
 		if (!product) {
-			product = this.store.find( prod => prod.ID === +id );
+			product = this.getStore().find( prod => prod.ID === +id );
 			this.basket.push( product );
 		}
 		if(!product.countInBasket) {
@@ -35,10 +35,6 @@ class ModelBasket {
 	removeProduct( id ){
 		this.basket = this.basket.filter( prod => prod.ID !== Number(id));
 		this.changeCounter();
-	}
-
-	setStore( products ){
-		this.store = products;
 	}
 
 }

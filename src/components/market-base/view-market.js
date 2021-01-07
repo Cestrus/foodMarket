@@ -1,7 +1,6 @@
 export class ViewMarket {
 	constructor( activityReducer ) {
 		this.activityReducer = activityReducer;
-		// this.root = document.querySelector('#root');
 		this.root = document.querySelector('.root-container');
 		this.aside = document.querySelector('.aside');
 
@@ -26,10 +25,6 @@ export class ViewMarket {
 		this.DOM.sort_by_price_Z_A.addEventListener('click', () => this.activityReducer('SORT_BY_PRICE', false));
 		this.DOM.sort_by_sale.addEventListener('click', () => this.activityReducer('SORT_BY_SALE'));
 	}
-
-	// renderMainContent( content ){
-	// 		this.root.innerHTML = content;
-	// }
 
 	asideHide(){
 		this.aside.classList.add('hide');

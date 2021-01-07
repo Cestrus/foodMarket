@@ -15,7 +15,7 @@ export class ModelMarket {
 			.get()
 			.then(query => {
 				query.forEach(product => {
-					this.setStore(product.data().products);
+					if (product.data().products) this.setStore(product.data().products);
 				});
 				return this.getStore();
 			});

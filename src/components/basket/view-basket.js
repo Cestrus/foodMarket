@@ -18,6 +18,7 @@ class ViewBasket{
 	}
 
 	renderBasketDetails( basket ){
+		this.container.classList.remove('hide');
 		if (basket.length) {
 			this.renderFullBasket( basket );
 		} else {
@@ -90,6 +91,7 @@ class ViewBasket{
 
 	exitBasket(){
 		this.container.innerHTML = '';
+		this.container.classList.add('hide');
 	}
 
 }

@@ -1,6 +1,5 @@
 let instance = null;
 
-
 export class Store {
 	constructor() {
 		if (instance) {
@@ -9,11 +8,12 @@ export class Store {
 			instance = this;
 		}
 
-		this.storeProducts = [];
+		this.storeProducts = [1, 2];
+		console.log('in store', this.storeProducts);
 	}
 
 	setStore( newStoreProducts ){
-		this.storeProducts = newStoreProducts;
+		this.storeProducts = [...newStoreProducts];
 	}
 
 	getStore() {
@@ -22,8 +22,8 @@ export class Store {
 
 	get methods(){
 		return {
-			setStore: this.setStore,
-			getStore: this.getStore,
+			setStore: (newStore) => this.setStore(newStore),
+			getStore: () => this.getStore(),
 		}
 	}
 }

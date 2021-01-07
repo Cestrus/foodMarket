@@ -1,11 +1,11 @@
 
 export class Details {
-  constructor(){
+  constructor({ getStore }){
     this.container = document.querySelector('.modal-container');
     this.btnExit = null;
-    this.store = null;
     this.listener = null;
-
+    this.getStore = getStore;
+    console.log(this.getStore)
   }
 
   renderDetails( id ){
@@ -58,12 +58,9 @@ export class Details {
     this.btnExit.removeEventListener( this.btnExit, this.listener );
   }
 
-  setStore( products ){
-    this.store = products;
-  }
-
   searchProduct( id ){
-    return this.store.find(prod => prod.ID === Number(id));
+    console.log(this.getStore)
+    return this.getStore().find(prod => prod.ID === Number(id));
   }
 }
 
