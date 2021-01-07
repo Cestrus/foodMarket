@@ -87,7 +87,7 @@ export class Reducer {
 				break;
 			}
 			case 'SEARCH_BY_PRODUCT': {
-				console.log(payload);
+				this.searchBar.searchByProduct( payload );
 				break;
 			}
 

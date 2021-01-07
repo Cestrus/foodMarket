@@ -8,8 +8,7 @@ export class Store {
 			instance = this;
 		}
 
-		this.storeProducts = [1, 2];
-		console.log('in store', this.storeProducts);
+		this.storeProducts = [];
 	}
 
 	setStore( newStoreProducts ){

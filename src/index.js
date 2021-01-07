@@ -6,11 +6,13 @@ import { Details } from './components/details/details.js';
 import { Reducer } from './services/reducer.js';
 import { ControllerBasket } from "./components/basket/controller-basket.js";
 import { Store } from "./services/store.js";
+import { Api } from "./services/api-firebase.js";
 
 const store = new Store();
-const market = new ControllerMarket( store.methods );
+const api = new Api( store.methods );
+const market = new ControllerMarket( store.methods, api.methods );
 
-const searchBar = new ControllerSearch( store.methods  );
+const searchBar = new ControllerSearch( store.methods, api.methods  );
 const bar = new ControllerBar();
 const pagination = new ControllerPagination();
 const details = new Details( store.methods  );

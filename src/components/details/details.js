@@ -5,7 +5,6 @@ export class Details {
     this.btnExit = null;
     this.listener = null;
     this.getStore = getStore;
-    console.log(this.getStore)
   }
 
   renderDetails( id ){

@@ -66,3 +66,19 @@
 	align-self: center;
 	font-weight: bold;;
 }
+
+@media (min-width: 200px) and (max-width: 720px) {
+	.modal-container{
+		position: fixed;
+		width: 100vw;
+
+	}
+	.details{
+		position: absolute;
+		width: 100%;
+		font-size: calc(5px + 2vw);
+		margin: auto;
+		left: 0;
+	}
+}
+

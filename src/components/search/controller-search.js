@@ -1,12 +1,10 @@
 import ModelSearch from "./model-search.js";
 import ViewSearch from "./view-search.js";
 
-import { dataFromFirebase } from '../../services/init-firebase.js';
-
 
 export class ControllerSearch {
-	constructor({setStore, getStore}) {
-		this.model = new ModelSearch( setStore, getStore );
+	constructor({setStore, getStore}, {loadCategories, loadProducts}) {
+		this.model = new ModelSearch( setStore, getStore, loadProducts, loadCategories );
 		this.view = new ViewSearch( this.activityReducer.bind(this) );
 		this.reducer = null;
 
@@ -22,18 +20,20 @@ export class ControllerSearch {
 	}
 
 	renderSearchBar() {
-		this.model.loadCategoriesFromDB( dataFromFirebase )
+		this.model.loadCategoriesFromDB()
 		.then(categories => {
 			this.view.renderSearchBar( categories );
 		})
 	}
 
-	searchByCategory( category ){
-		this.model.searchByCategory( category );
+	async searchByCategory( category ){
+		let length = await this.model.searchByCategory( category );
+		await this.activityReducer('LOADED_PRODUCTS', length )
 	}
 
-	searchByProduct( product ){
-		this.model.searchByProduct( product )
+	async searchByProduct( product ){
+		let length = await this.model.searchByProduct( product );
+		this.activityReducer('LOADED_PRODUCTS', length )
 	}
 
 	hide(){

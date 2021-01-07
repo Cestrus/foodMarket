@@ -1,20 +1,15 @@
 import ModelMarket from './model-market.js';
 import ViewMarket from './view-market.js';
 
-import { dataFromFirebase } from '../../services/init-firebase.js';
-
-
 export class ControllerMarket {
-	constructor({setStore, getStore}) {
-		this.model = new ModelMarket( setStore, getStore );
+	constructor({setStore, getStore}, {loadProducts}) {
+		this.model = new ModelMarket( setStore, getStore, loadProducts );
 		this.view = new ViewMarket( this.activityReducer.bind(this));
 		this.reducer = null;
-		console.log('contr market', getStore())
 	}
 
 	start(){
 		this.view.createDOM();
-		this.model.initDatabase( dataFromFirebase );
 		this.model.loadDataFromDB()
 		.then(products => {
 			this.model.sortBySale();

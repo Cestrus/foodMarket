@@ -1,24 +1,13 @@
 
 export class ModelMarket {
-	constructor( setStore, getStore ) {
-		this.db = null;
+	constructor( setStore, getStore, loadProducts ) {
 		this.setStore = setStore;
 		this.getStore = getStore;
-	}
-
-	initDatabase(dataFromFirebase){
-		this.db = dataFromFirebase;
+		this.loadProducts = loadProducts;
 	}
 
 	loadDataFromDB(){
-		return this.db.collection("store")
-			.get()
-			.then(query => {
-				query.forEach(product => {
-					if (product.data().products) this.setStore(product.data().products);
-				});
-				return this.getStore();
-			});
+		return this.loadProducts();
 	}
 
 	loadProductsFromStore(page = 1, step = 20){
