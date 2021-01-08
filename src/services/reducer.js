@@ -1,7 +1,7 @@
 let instance = null;
 
 export class Reducer {
-	constructor( market, searchBar, bar, pagination, details, basket ) {
+	constructor( market, searchBar, bar, pagination, details, basket, customer ) {
 		if (instance) {
 			return instance;
 		} else {
@@ -14,6 +14,7 @@ export class Reducer {
 		this.pagination = pagination;
 		this.details = details;
 		this.basket = basket;
+		this.customer = customer;
 
 		this.initReducer();
 	}
@@ -24,6 +25,7 @@ export class Reducer {
 		this.bar.initReducer( this );
 		this.pagination.initReducer( this );
 		this.basket.initReducer( this );
+		this.customer.initReducer( this );
 	}
 
 	activityReducer( actionType, payload ){
@@ -62,7 +64,7 @@ export class Reducer {
 				break;
 			}
 			case 'EXIT_BASKET': {
-				this.basket.exitBasket();
+				this.basket.exitBasket( payload );
 				this.bar.visible();
 				this.pagination.visible();
 				this.market.asideVisible();
@@ -97,6 +99,9 @@ export class Reducer {
 			case 'SING_OUT': {
 
 				break;
+			}
+			case 'SAVE_USER_DATA': {
+				this.customer.saveUserData( payload )
 			}
 
 		}

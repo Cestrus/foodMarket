@@ -5,7 +5,7 @@ class ViewBasket{
 		this.container = document.querySelector('.main-basket');
 		this.activityReducer = activityReducer;
 		this.totalPriceContainer = null;
-		this.basketIcon.addEventListener('click', () => this.activityReducer.bind(this, 'EXIT_BASKET'));
+		// this.basketIcon.addEventListener('click', () => this.activityReducer.bind(this, 'EXIT_BASKET'));
 	}
 
 	renderCounter( num ){
@@ -24,7 +24,7 @@ class ViewBasket{
 		} else {
 			this.renderEmptyBasket();
 		}
-		document.querySelector('.btn-basket-exit').addEventListener('click', () => this.activityReducer('EXIT_BASKET'));
+		document.querySelector('.btn-basket-exit').addEventListener('click', () => this.activityReducer('EXIT_BASKET', basket));
 	}
 
 	renderEmptyBasket() {
@@ -89,9 +89,10 @@ class ViewBasket{
 		this.renderTotalPrice();
 	}
 
-	exitBasket(){
+	exitBasket( basket ){
 		this.container.innerHTML = '';
 		this.container.classList.add('hide');
+		this.activityReducer('SAVE_USER_DATA', basket);
 	}
 
 }

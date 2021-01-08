@@ -8,13 +8,14 @@ class ModelBasket {
 	changeCountProduct( id, count = null, max = null ){
 		let product = this.basket.find(prod => prod.ID === +id);
 		if (!product) {
-			product = this.getStore().find( prod => prod.ID === +id );
+			product = {};
+			Object.assign(product, this.getStore().find( prod => prod.ID === +id ));
 			this.basket.push( product );
 		}
 		if(!product.countInBasket) {
 			product.countInBasket = 1;
 			this.changeCounter();
-		} else if (!count) {
+		} else if (!count) { 
 			product.countInBasket++;
 			this.changeCounter();
 		} else if (Number(count) < 0) {

@@ -36,6 +36,10 @@
   padding-left: 10px;
 }
 
+.inp-name:hover{
+  
+}
+
 .subm-wrap {
   padding: 0;
 }
@@ -47,7 +51,7 @@
   font-size: 10px;
 }
 
-.inp-subm, .btn-exit--signIn, .btn-reg{
+.btn-subm, .btn-exit--signIn, .btn-reg{
   font-weight: bold;
   font-style: italic;
   height: 25px;

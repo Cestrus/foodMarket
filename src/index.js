@@ -18,8 +18,9 @@ const bar = new ControllerBar();
 const pagination = new ControllerPagination();
 const details = new Details( store.methods  );
 const basket = new ControllerBasket( store.methods );
-const reducer = new Reducer( market, searchBar, bar, pagination, details, basket );
+const customer = new ControllerCustomer();
 
-const customer = new ControllerCustomer( api.methods );
+const reducer = new Reducer( market, searchBar, bar, pagination, details, basket, customer );
+
 
 market.start();

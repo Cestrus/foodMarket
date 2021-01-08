@@ -21,8 +21,8 @@ export class ControllerBasket {
 		if( this.model.basket.length ) this.view.renderTotalPrice();
 	}
 
-	exitBasket(){
-		this.view.exitBasket();
+	exitBasket( basket ){
+		this.view.exitBasket( basket );
 	}
 
 	buyProduct({id, count}){
