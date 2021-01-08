@@ -2,7 +2,7 @@
 class ViewBar {
 	constructor( activityReducer ) {
 		this.container = document.querySelector('.main-bar');
-		this.container.addEventListener('click', this.cardClickListener.bind(this));
+		this.container.addEventListener('click', this.cardClickHandler.bind(this));
 		this.activityReducer = activityReducer;
 		this.bar = null;
 	}
@@ -42,7 +42,7 @@ class ViewBar {
     `
 	}
 
-	cardClickListener(ev){
+	cardClickHandler(ev){
 		if (ev.target.classList.contains('btn-buy')){
 			this.activityReducer('BUY_PRODUCT', {id: ev.target.getAttribute('data-id')} );
 		} else if (ev.target.classList.contains('btn-details')){

@@ -90,7 +90,14 @@ export class Reducer {
 				this.searchBar.searchByProduct( payload );
 				break;
 			}
+			case 'SING_IN': {
 
+				break;
+			}
+			case 'SING_OUT': {
+
+				break;
+			}
 
 		}
 	}

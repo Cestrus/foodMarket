@@ -1,9 +1,6 @@
 class ViewSearch {
 	constructor( activityReducer ){
 		this.container = document.querySelector('.search');
-		// this.search_category = null;
-		// this.search_product = null;
-		// this.search_icon = null;
 		this.activityReducer = activityReducer;
 
 	}
