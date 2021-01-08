@@ -32,8 +32,9 @@ export class ControllerSearch {
 	}
 
 	async searchByProduct( product ){
-		let length = await this.model.searchByProduct( product );
-		this.activityReducer('LOADED_PRODUCTS', length )
+		let products = await this.model.searchByProduct( product );
+		await this.activityReducer('LOADED_PRODUCTS', products.length );
+		await this.activityReducer('GET_PAGE_PRODUCT', products);
 	}
 
 	hide(){
