@@ -1,7 +1,6 @@
 export class Loader{
 	constructor() {
 		this.container = document.querySelector('.loader-wrap');
-		console.log(this.container)
 	}
 
 	showLoader(){

@@ -12,11 +12,11 @@ export class ViewCustomer{
     this.submitReg = submitReg;
     this.submitEnter = submitEnter;
     this.activityReducer = activityReducer;
-    
-    this.singIcon.addEventListener('click', this.singInHendler.bind(this));
+
+    this.singIcon.addEventListener('click', this.singInHandler.bind(this));
   }
 
-  singInHendler(){
+  singInHandler(){
     if(this.isSignIn){
       // singOut();
       this.activityReducer('SING_OUT');
@@ -46,7 +46,7 @@ export class ViewCustomer{
       this.btnReg = document.querySelector('.btn-reg');
       this.inpName = document.querySelector('.inp-name');
       this.inpPass = document.querySelector('.inp-pass');
-      this.btnSubmit.addEventListener('click', this.submEnterHandler.bind(this)); // 
+      this.btnSubmit.addEventListener('click', this.submEnterHandler.bind(this)); //
       this.btnExit.addEventListener('click', this.exitHandler.bind(this));
       this.btnReg.addEventListener('click', this.regFormHandler.bind(this));
   }
@@ -73,7 +73,7 @@ export class ViewCustomer{
       this.inpPass = document.querySelector('.inp-pass');
       this.inpEmail = document.querySelector('.inp-email');
       this.btnSubmit.addEventListener('click', this.submRegHandler.bind(this)); //
-      this.btnExit.addEventListener('click', this.exitHandler.bind(this));    
+      this.btnExit.addEventListener('click', this.exitHandler.bind(this));
   }
 
   renderAlertWindow( message, form ){
@@ -99,7 +99,7 @@ export class ViewCustomer{
   }
 
   renderUserIcon(){
-    
+
   }
 
   submRegHandler(){

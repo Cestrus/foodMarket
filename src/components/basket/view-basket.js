@@ -1,11 +1,9 @@
 class ViewBasket{
 	constructor( activityReducer ) {
-		this.basketIcon = document.querySelector('.basket');
 		this.counter = document.querySelector('.basket__counter');
 		this.container = document.querySelector('.main-basket');
 		this.activityReducer = activityReducer;
 		this.totalPriceContainer = null;
-		// this.basketIcon.addEventListener('click', () => this.activityReducer.bind(this, 'EXIT_BASKET'));
 	}
 
 	renderCounter( num ){
@@ -24,6 +22,7 @@ class ViewBasket{
 		} else {
 			this.renderEmptyBasket();
 		}
+		this.renderTotalPrice();
 		document.querySelector('.btn-basket-exit').addEventListener('click', () => this.activityReducer('EXIT_BASKET', basket));
 	}
 
@@ -35,7 +34,6 @@ class ViewBasket{
 					<button class="btn-basket-exit">EXIT</button>
 				</div>
 			</div>
-
 		`
 	}
 
@@ -77,16 +75,6 @@ class ViewBasket{
 			allPricesEl.find(el => el.attributes['data-id'].value === id).innerText = `${ totalPrice } uah`;
 		}
 		this.totalPriceContainer.innerText = `${allPricesEl.reduce((acc, curr) => acc + parseFloat(curr.innerText), 0)} uah`;
-	}
-
-	removeProduct( id ){
-		[...document.querySelector('.basket-container').children].forEach( el => {
-			if(el.attributes['data-id'] && el.attributes['data-id'].value === id) {
-				el.remove();
-			}
-		})
-		;
-		this.renderTotalPrice();
 	}
 
 	exitBasket( basket ){

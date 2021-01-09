@@ -3,7 +3,7 @@ import ViewBasket from "./view-basket.js";
 
 export class ControllerBasket {
 	constructor({ getStore }) {
-		this.model = new ModelBasket( getStore );
+		this.model = new ModelBasket( getStore, this.activityReducer.bind( this ));
 		this.view = new ViewBasket( this.activityReducer.bind( this ));
 		this.reducer = null;
 	}
@@ -36,9 +36,10 @@ export class ControllerBasket {
 	}
 
 	removeProduct( id ){
-		this.model.removeProduct( id );
+		const basket = this.model.removeProduct( id );
+		// this.activityReducer('SAVE_USER_DATA', basket);
 		this.view.renderCounter( this.model.counter );
-		this.view.removeProduct( id );
+		this.view.renderBasketDetails ( basket )
 	}
 
 }

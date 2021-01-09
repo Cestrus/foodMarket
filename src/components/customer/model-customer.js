@@ -1,9 +1,9 @@
 export class ModelCustomer{
   constructor( activityReducer ){
     this.user = {
-      name: 'unknow', 
-      email: 'unknow', 
-      pass: '', 
+      name: 'unknow',
+      email: 'unknow',
+      pass: '',
       basket: [],
     }
     this.activityReducer = activityReducer;
@@ -20,7 +20,7 @@ export class ModelCustomer{
     for(let i = 0; i < str.length; i++){
       if(!this.validSymbols.match(str[i])){
         return false;
-      } 
+      }
     }
     return true;
   }
@@ -39,7 +39,7 @@ export class ModelCustomer{
   }
 
   checkUser( name, pass ){
-    const userData = localStorage.getItem(name);
+    let userData = localStorage.getItem(name);
     if(!userData) {
       return 'User not found';
     } else {
@@ -51,10 +51,11 @@ export class ModelCustomer{
         this.activityReducer('SING_IN', this.user.basket);
         return 'correct';
       }
-    } 
+    }
   }
 
   saveUserData( products = [] ){
+    this.user.basket.length = 0;
     products.forEach(prod => {
       this.user.basket.push({id: prod.ID, count: prod.countInBasket})
     })

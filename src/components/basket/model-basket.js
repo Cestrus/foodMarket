@@ -1,8 +1,9 @@
 class ModelBasket {
-	constructor( getStore ) {
+	constructor( getStore, activityReducer ) {
 		this.basket = [];
 		this.counter = 0;
 		this.getStore = getStore;
+		this.activityReducer =activityReducer;
 	}
 
 	changeCountProduct( id, count = null, max = null ){
@@ -15,7 +16,7 @@ class ModelBasket {
 		if(!product.countInBasket) {
 			product.countInBasket = 1;
 			this.changeCounter();
-		} else if (!count) { 
+		} else if (!count) {
 			product.countInBasket++;
 			this.changeCounter();
 		} else if (Number(count) < 0) {
@@ -26,6 +27,7 @@ class ModelBasket {
 			product.countInBasket = Number(count);
 			this.changeCounter();
 		}
+		this.activityReducer('SAVE_USER_DATA', this.basket);
 		return product.PRICE * product.countInBasket;
 	}
 
@@ -36,6 +38,8 @@ class ModelBasket {
 	removeProduct( id ){
 		this.basket = this.basket.filter( prod => prod.ID !== Number(id));
 		this.changeCounter();
+		this.activityReducer('SAVE_USER_DATA', this.basket);
+		return this.basket;
 	}
 
 }
