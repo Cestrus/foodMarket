@@ -19,6 +19,7 @@ export class ViewCustomer{
   singInHendler(){
     if(this.isSignIn){
       // singOut();
+      this.activityReducer('SING_OUT');
       this.isSignIn = false;
     } else {
       this.renderSignInForm()
@@ -86,15 +87,19 @@ export class ViewCustomer{
     this.btnExit.addEventListener('click', this.exitHandler.bind(this, form));
   }
 
-  exitHandler(form){
+  exitHandler(form = 'correct'){
     if(form === 'reg') this.renderRegForm();
-    if(form === 'signin') this.renderSignInForm();
+    else if(form === 'signin') this.renderSignInForm();
     else this.container.innerHTML = '';
   }
 
   regFormHandler(){
     this.container.innerHTML = '';
     this.renderRegForm();
+  }
+
+  renderUserIcon(){
+    
   }
 
   submRegHandler(){

@@ -1,22 +1,14 @@
 export class ModelCustomer{
-  constructor(){
+  constructor( activityReducer ){
     this.user = {
       name: 'unknow', 
       email: 'unknow', 
       pass: '', 
       basket: [],
     }
-
+    this.activityReducer = activityReducer;
     this.validSymbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-1234567890";
   }
-
-  // set user({name, email, pass}){
-    // this.user = {name, email, pass}
-  // }
-
-  // get user(){
-    // return this.user;
-  // }
 
   isValidEmail( email ){
     return email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
@@ -37,8 +29,11 @@ export class ModelCustomer{
     if (!this.isValidEmail(email)) return 'Invalid email';
     else if (!this.isValidName(name)) return 'Invalid name';
     else {
-      this.user = {name, email, pass};
+      this.user.name = name;
+      this.user.email = email;
+      this.user.pass = pass;
       console.log('registr', this.user);
+      this.saveUserData();
       return 'correct';
     }
   }
@@ -48,26 +43,24 @@ export class ModelCustomer{
     if(!userData) {
       return 'User not found';
     } else {
-      this.parseUserData(userData)
-    }
-      this.user = {name, email, pass};
-      return 'correct';
-
+      userData = JSON.parse( userData );
+      if( userData.pass !== pass ){
+        return 'Invalid password';
+      } else {
+        this.user = userData;
+        this.activityReducer('SING_IN', this.user.basket);
+        return 'correct';
+      }
+    } 
   }
 
-  saveUserData( products ){
+  saveUserData( products = [] ){
     products.forEach(prod => {
       this.user.basket.push({id: prod.ID, count: prod.countInBasket})
     })
     const userJSON = JSON.stringify(this.user);
     localStorage.setItem(this.user.name, userJSON);
   }
-
-  parseUserData(){
-
-  }
-
-
 }
 
 export default ModelCustomer;
