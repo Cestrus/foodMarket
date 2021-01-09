@@ -58,7 +58,6 @@ export class Details {
   }
 
   searchProduct( id ){
-    console.log(this.getStore)
     return this.getStore().find(prod => prod.ID === Number(id));
   }
 }

@@ -93,15 +93,18 @@ export class Reducer {
 				break;
 			}
 			case 'SING_IN': {
-
+				this.customer.renderUserProfile( payload.name );
+				this.basket.loadUserBasket( payload.basket );
 				break;
 			}
 			case 'SING_OUT': {
-
+				this.basket.clearBasket();
+				this.customer.clearUser();
 				break;
 			}
 			case 'SAVE_USER_DATA': {
-				this.customer.saveUserData( payload )
+				this.customer.saveUserData( payload );
+				break;
 			}
 
 		}

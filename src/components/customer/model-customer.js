@@ -15,7 +15,6 @@ export class ModelCustomer{
   }
 
   isValidName( name ){
-
     let str = [...name];
     for(let i = 0; i < str.length; i++){
       if(!this.validSymbols.match(str[i])){
@@ -32,8 +31,8 @@ export class ModelCustomer{
       this.user.name = name;
       this.user.email = email;
       this.user.pass = pass;
-      console.log('registr', this.user);
       this.saveUserData();
+      this.activityReducer('SING_IN', {name});
       return 'correct';
     }
   }
@@ -48,7 +47,7 @@ export class ModelCustomer{
         return 'Invalid password';
       } else {
         this.user = userData;
-        this.activityReducer('SING_IN', this.user.basket);
+        this.activityReducer('SING_IN', {name: this.user.name, basket: this.user.basket});
         return 'correct';
       }
     }
@@ -62,6 +61,16 @@ export class ModelCustomer{
     const userJSON = JSON.stringify(this.user);
     localStorage.setItem(this.user.name, userJSON);
   }
+
+  clearUser(){
+    this.user = {
+      name: 'unknow',
+      email: 'unknow',
+      pass: '',
+      basket: [],
+    };
+  }
+
 }
 
 export default ModelCustomer;

@@ -19,10 +19,10 @@ class ViewBasket{
 		this.container.classList.remove('hide');
 		if (basket.length) {
 			this.renderFullBasket( basket );
+			this.renderTotalPrice();
 		} else {
 			this.renderEmptyBasket();
 		}
-		this.renderTotalPrice();
 		document.querySelector('.btn-basket-exit').addEventListener('click', () => this.activityReducer('EXIT_BASKET', basket));
 	}
 
@@ -61,7 +61,7 @@ class ViewBasket{
 
 	renderProductList( product ){
 		return `
-			<div class="basket-item-name" data-id="${product.ID}">${product.PRODUCT_NAME.toLowerCase()}</div>
+			<div class="basket-item-name" data-id="${product.ID}"><p>${product.PRODUCT_NAME.toLowerCase()}</p></div>
 			<div class="basket-item-price" data-id="${product.ID}">${product.PRICE} uah</div>
 			<input class="basket-item-count" type="number" min="0" step="1" max="${product.AMOUNT}" value="${product.countInBasket}" data-id="${product.ID}">
 			<div class="basket-item-totalPrice" data-id="${product.ID}">${+product.PRICE * product.countInBasket} uah</div>

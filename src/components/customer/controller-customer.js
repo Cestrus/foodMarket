@@ -3,7 +3,7 @@ import ModelCustomer from './model-customer.js';
 
 
 export class ControllerCustomer{
-  constructor( ){
+  constructor(){
     this.model = new ModelCustomer( this.activityReducer.bind(this) );
     this.view = new ViewCustomer( this.submitReg.bind(this), this.submitEnter.bind(this), this.activityReducer.bind(this));
     this.reducer = null;
@@ -31,4 +31,11 @@ export class ControllerCustomer{
     this.model.saveUserData( basket );
   }
 
+  renderUserProfile( name ){
+  	this.view.renderUserProfile( name );
+  }
+
+	clearUser(){
+  	this.model.clearUser();
+	}
 }

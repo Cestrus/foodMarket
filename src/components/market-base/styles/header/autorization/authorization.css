@@ -1,8 +1,0 @@
-@import "profile.css";
-@import 'sign-in-out.css';
-
-
-.authorization {
-	display: flex;
-	justify-content: flex-end;
-}

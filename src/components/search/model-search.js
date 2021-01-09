@@ -28,10 +28,9 @@ class ModelSearch {
 	}
 
 	searchByProduct( product ){
-		let products =  this.getStore().filter(prod => {
-			if(prod.PRODUCT_NAME) return	prod.PRODUCT_NAME.toLowerCase().includes(product);
+		return this.getStore().filter(prod => {
+			if (prod.PRODUCT_NAME) return prod.PRODUCT_NAME.toLowerCase().includes(product);
 		});
-		return products;
 	}
 
 }

@@ -1,9 +1,11 @@
 class ModelBasket {
-	constructor( getStore, activityReducer ) {
+	constructor( getStore, setStore, activityReducer, loadProducts ) {
 		this.basket = [];
 		this.counter = 0;
 		this.getStore = getStore;
-		this.activityReducer =activityReducer;
+		this.setStore = setStore;
+		this.activityReducer = activityReducer;
+		this.loadProducts = loadProducts;
 	}
 
 	changeCountProduct( id, count = null, max = null ){
@@ -42,6 +44,31 @@ class ModelBasket {
 		return this.basket;
 	}
 
+	async loadUserBasket( loadedBasket ){ // id, count
+		if(loadedBasket){
+			return this.loadProducts().then(prod => {
+				this.setStore( prod );
+				loadedBasket.forEach(userProd => {
+					prod.forEach(product => {
+						if(userProd.id === product.ID){
+							product.countInBasket = userProd.count;
+							this.basket.push( product );
+						}
+					})
+				})
+				this.activityReducer('LOADED_PRODUCTS', this.getStore().length);
+				this.activityReducer('GET_PAGE_PRODUCT', this.getStore());
+				this.changeCounter();
+				return this.counter;
+			});
+		}
+	}
+
+	clearBasket(){
+		this.activityReducer('SAVE_USER_DATA', this.basket);
+		this.basket.length = 0;
+		return this.basket;
+	}
 }
 
 export default ModelBasket;

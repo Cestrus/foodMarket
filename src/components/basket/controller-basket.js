@@ -2,8 +2,8 @@ import ModelBasket from "./model-basket.js";
 import ViewBasket from "./view-basket.js";
 
 export class ControllerBasket {
-	constructor({ getStore }) {
-		this.model = new ModelBasket( getStore, this.activityReducer.bind( this ));
+	constructor({ getStore, setStore }, {loadProducts}) {
+		this.model = new ModelBasket( getStore, setStore, this.activityReducer.bind( this ), loadProducts);
 		this.view = new ViewBasket( this.activityReducer.bind( this ));
 		this.reducer = null;
 	}
@@ -37,9 +37,19 @@ export class ControllerBasket {
 
 	removeProduct( id ){
 		const basket = this.model.removeProduct( id );
-		// this.activityReducer('SAVE_USER_DATA', basket);
 		this.view.renderCounter( this.model.counter );
-		this.view.renderBasketDetails ( basket )
+		this.view.renderBasketDetails ( basket );
+	}
+
+	loadUserBasket( loadedBasket ){
+		this.model.loadUserBasket( loadedBasket )
+		.then(count => this.view.renderCounter( count ));
+	}
+
+	clearBasket(){
+		const basket = this.model.clearBasket();
+		this.view.renderCounter( basket.length );
+		this.view.renderBasketDetails( basket );
 	}
 
 }

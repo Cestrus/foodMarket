@@ -18,11 +18,10 @@
 .basket-container {
 	display: grid;
 	grid-template-areas: 'name price count total remove';
-	grid-template-rows: 30px;
-	grid-template-columns: 1fr 100px 60px 100px 30px;
-
+	grid-template-rows: 40px;
+	grid-template-columns: 1fr 100px 150px 150px 30px;
 	width: 100%;
-	font-size: 15px;
+	font-size: calc(5px + 1vw);
 }
 
 .basket-item-title-name {

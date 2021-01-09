@@ -2,6 +2,7 @@ export class ViewCustomer{
   constructor( submitReg, submitEnter, activityReducer){
     this.container = document.querySelector('.modal-container');
     this.singIcon = document.querySelector('.sign-in-out');
+    this.profilePanel = document.querySelector('.profile');
     this.btnExit = null;
     this.btnSubmit = null;
     this.btnReg = null;
@@ -18,7 +19,7 @@ export class ViewCustomer{
 
   singInHandler(){
     if(this.isSignIn){
-      // singOut();
+      this.profilePanel.classList.add('hide');
       this.activityReducer('SING_OUT');
       this.isSignIn = false;
     } else {
@@ -98,8 +99,22 @@ export class ViewCustomer{
     this.renderRegForm();
   }
 
-  renderUserIcon(){
+  renderUserProfile( name ){
+    this.profilePanel.classList.remove('hide');
+    this.profilePanel.innerHTML = `
+      <p class="profile__name">${ name }</p>
+      <div class="profile__img-wrap">
+        <img src="https://cdn.onlinewebfonts.com/svg/img_452602.png" alt="signIn" class="profile__img">
+      </div>`;
+    this.changeSignIcon();
+    this.isSignIn = true;
+  }
 
+  changeSignIcon(){
+    const urlSignIn = 'https://cdn.onlinewebfonts.com/svg/img_328.png';
+    const urlSignOut = 'https://cdn.onlinewebfonts.com/svg/img_779.png';
+    const icon = this.singIcon.children[0].children[0];
+    icon.src = (icon.src === urlSignIn)? urlSignOut : urlSignIn;
   }
 
   submRegHandler(){
@@ -120,10 +135,9 @@ export class ViewCustomer{
     this.submitEnter( userData );
   }
 
-  chooseAlertWindow( message, name ){
+  chooseAlertWindow( message ){
     if(message === 'correct'){
-      this.view.exitHandler();
-      this.activityReducer('SING_IN', name)
+      this.exitHandler();
     } else if (message === 'User not found'){
       this.renderAlertWindow( message, 'signin' );
     } else if(message === 'Invalid password') {

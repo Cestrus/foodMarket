@@ -1,13 +1,8 @@
 
 export class ModelMarket {
-	constructor( setStore, getStore, loadProducts ) {
+	constructor( setStore, getStore ) {
 		this.setStore = setStore;
 		this.getStore = getStore;
-		this.loadProducts = loadProducts;
-	}
-
-	loadDataFromDB(){
-		return this.loadProducts();
 	}
 
 	loadProductsFromStore(page = 1, step = 20){
