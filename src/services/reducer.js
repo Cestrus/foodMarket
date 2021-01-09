@@ -1,7 +1,7 @@
 let instance = null;
 
 export class Reducer {
-	constructor( market, searchBar, bar, pagination, details, basket, customer ) {
+	constructor( market, searchBar, bar, pagination, details, basket, customer, telegram ) {
 		if (instance) {
 			return instance;
 		} else {
@@ -15,6 +15,7 @@ export class Reducer {
 		this.details = details;
 		this.basket = basket;
 		this.customer = customer;
+		this.telegram = telegram;
 
 		this.initReducer();
 	}
@@ -26,6 +27,7 @@ export class Reducer {
 		this.pagination.initReducer( this );
 		this.basket.initReducer( this );
 		this.customer.initReducer( this );
+		this.telegram.initReducer( this );
 	}
 
 	activityReducer( actionType, payload ){
@@ -104,6 +106,20 @@ export class Reducer {
 			}
 			case 'SAVE_USER_DATA': {
 				this.customer.saveUserData( payload );
+				break;
+			}
+			case 'SEND_MESSAGE': {
+				this.telegram.sendMessage( payload );
+				break;
+			}
+			case 'BUY_ALL_BASKET': {
+				this.basket.buyAllBasket( payload );
+				this.basket.exitBasket();
+				this.bar.visible();
+				this.pagination.visible();
+				this.market.asideVisible();
+				this.searchBar.visible();
+				this.market.tansformRootContainer();
 				break;
 			}
 

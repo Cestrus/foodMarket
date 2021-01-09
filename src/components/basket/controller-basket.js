@@ -2,7 +2,7 @@ import ModelBasket from "./model-basket.js";
 import ViewBasket from "./view-basket.js";
 
 export class ControllerBasket {
-	constructor({ getStore, setStore }, {loadProducts}) {
+	constructor({ getStore, setStore }, {loadProducts}){
 		this.model = new ModelBasket( getStore, setStore, this.activityReducer.bind( this ), loadProducts);
 		this.view = new ViewBasket( this.activityReducer.bind( this ));
 		this.reducer = null;
@@ -50,6 +50,10 @@ export class ControllerBasket {
 		const basket = this.model.clearBasket();
 		this.view.renderCounter( basket.length );
 		this.view.renderBasketDetails( basket );
+	}
+
+	buyAllBasket( totalPrice ){
+		this.model.buyAllBasket( totalPrice );
 	}
 
 }

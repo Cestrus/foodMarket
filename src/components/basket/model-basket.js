@@ -69,6 +69,12 @@ class ModelBasket {
 		this.basket.length = 0;
 		return this.basket;
 	}
+
+	buyAllBasket( totalPrice ){
+		const message = `Sell products on ${totalPrice} `;
+		this.activityReducer('SEND_MESSAGE', message);
+		this.clearBasket();
+	}
 }
 
 export default ModelBasket;

@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c70526cb-7d8f-4675-a4ff-9fef1b0ad495" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/api-firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/details/details.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/details.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/details/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/details/details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/market-base/controller-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/controller-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/market-base/model-market.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/market-base/model-market.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination/styles/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/styles/pagination.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination/view-pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/view-pagination.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/controller-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/controller-search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search/model-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/model-search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/controller-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/controller-basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/model-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/model-basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/styles/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/styles/basket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/basket/view-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/view-basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/customer/styles/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/customer/styles/customer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/init-firebase.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +41,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -84,6 +79,7 @@
       <workItem from="1609848037252" duration="13461000" />
       <workItem from="1609912590243" duration="53730000" />
       <workItem from="1610009398273" duration="31416000" />
+      <workItem from="1610217934011" duration="10758000" />
     </task>
     <servers />
   </component>
