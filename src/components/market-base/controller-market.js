@@ -2,16 +2,20 @@ import ModelMarket from './model-market.js';
 import ViewMarket from './view-market.js';
 
 export class ControllerMarket {
-	constructor({setStore, getStore}, {loadProducts}) {
+	constructor({setStore, getStore}, {loadProducts}, {showLoader, hideLoader}) {
 		this.model = new ModelMarket( setStore, getStore, loadProducts );
 		this.view = new ViewMarket( this.activityReducer.bind(this));
 		this.reducer = null;
+		this.showLoader = showLoader;
+		this.hideLoader = hideLoader;
 	}
 
 	start(){
 		this.view.createDOM();
+		this.showLoader();
 		this.model.loadDataFromDB()
 		.then(products => {
+			this.hideLoader();
 			this.model.sortBySale();
 			this.reducer.activityReducer('LOADED_PRODUCTS', products.length)
 		})
