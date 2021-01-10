@@ -59,8 +59,8 @@ class ViewBasket{
 			</div>
 		`
 		document.querySelectorAll('.basket-item-count').forEach(el => el.addEventListener('input', ev => {
-			this.activityReducer('CHANGE_COUNT_PRODUCT', { id: ev.target.attributes['data-id'].value, count: ev.target.value, max: ev.target.attributes['max'].value});
 			this.nowActiveInput = ev;
+			this.activityReducer('CHANGE_COUNT_PRODUCT', { id: ev.target.attributes['data-id'].value, count: ev.target.value, max: ev.target.attributes['max'].value});
 		}));
 		document.querySelectorAll('.basket-item-count').forEach(el => el.addEventListener('change', ev => this.activityReducer('CHANGE_COUNT_PRODUCT', { id: ev.target.attributes['data-id'].value, count: ev.target.value, max: ev.target.attributes['max'].value})));
 		document.querySelectorAll('.basket-item-name').forEach(el => el.addEventListener('click', ev => this.activityReducer('SHOW_DETAILS', ev.target.attributes['data-id'].value)));

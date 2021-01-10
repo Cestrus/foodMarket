@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c70526cb-7d8f-4675-a4ff-9fef1b0ad495" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/basket/controller-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/controller-basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/basket/model-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/model-basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/basket/styles/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/styles/basket.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/basket/view-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/view-basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/loader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/loader.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,8 @@
       <workItem from="1609912590243" duration="53730000" />
       <workItem from="1610009398273" duration="31416000" />
       <workItem from="1610217934011" duration="12324000" />
-      <workItem from="1610267310306" duration="5927000" />
+      <workItem from="1610267310306" duration="6939000" />
+      <workItem from="1610286187103" duration="5239000" />
     </task>
     <servers />
   </component>

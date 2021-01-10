@@ -20,10 +20,12 @@ class ModelBasket {
 		if(!product.countInBasket && product.countInBasket !== 0) {
 			product.countInBasket = 1;
 			this.changeCounter();
-		} else if (!count) {
+		} else if (count === null ) { // <-- btn buy
 			product.countInBasket++;
 			this.changeCounter();
-		} else if (Number(count) < 0) {
+		} else if ( isNaN(count)){
+			product.countInBasket += 0;
+		} else if (Number(count) < 0 || count === '') {
 			product.countInBasket = 0;
 			isOverMin = true;
 		} else if (Number(count) > Number(max)) {
