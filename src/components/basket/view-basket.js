@@ -4,10 +4,12 @@ class ViewBasket{
 		this.container = document.querySelector('.main-basket');
 		this.activityReducer = activityReducer;
 		this.totalPriceContainer = null;
+		this.nowActiveInput = null;
 	}
 
 	renderCounter( num ){
 		if( num ){
+			num = (num > 99)? '...' : num;
 			this.counter.innerHTML = `${num}`;
 			this.counter.classList.remove('hide');
 		} else {
@@ -56,6 +58,10 @@ class ViewBasket{
 					<button class="btn-basket-exit">EXIT</button>
 			</div>
 		`
+		document.querySelectorAll('.basket-item-count').forEach(el => el.addEventListener('input', ev => {
+			this.activityReducer('CHANGE_COUNT_PRODUCT', { id: ev.target.attributes['data-id'].value, count: ev.target.value, max: ev.target.attributes['max'].value});
+			this.nowActiveInput = ev;
+		}));
 		document.querySelectorAll('.basket-item-count').forEach(el => el.addEventListener('change', ev => this.activityReducer('CHANGE_COUNT_PRODUCT', { id: ev.target.attributes['data-id'].value, count: ev.target.value, max: ev.target.attributes['max'].value})));
 		document.querySelectorAll('.basket-item-name').forEach(el => el.addEventListener('click', ev => this.activityReducer('SHOW_DETAILS', ev.target.attributes['data-id'].value)));
 		document.querySelectorAll('.btn-remove-item').forEach(el => el.addEventListener('click', ev => this.activityReducer('REMOVE_PRODUCT', ev.target.attributes['data-id'].value)));
@@ -67,15 +73,17 @@ class ViewBasket{
 			<div class="basket-item-name" data-id="${product.ID}">${product.PRODUCT_NAME.toLowerCase()}</div>
 			<div class="basket-item-price" data-id="${product.ID}">${product.PRICE} uah</div>
 			<input class="basket-item-count" type="number" min="0" step="1" max="${product.AMOUNT}" value="${product.countInBasket}" data-id="${product.ID}">
-			<div class="basket-item-totalPrice" data-id="${product.ID}">${+product.PRICE * product.countInBasket} uah</div>
+			<div class="basket-item-totalPrice" data-id="${product.ID}">${+product.PRICE * product.countInBasket}</div>
 			<button class="btn-remove-item" data-id="${product.ID}">X</button>			
 		`
 	}
 
-	renderTotalPrice( id = null, totalPrice = null ) {
+	renderTotalPrice( id = null, totalPrice = null, isOverMax = false, isOverMin = false, max = null ) {
 		let allPricesEl = [...document.querySelectorAll('.basket-item-totalPrice')];
 		if (id) {
-			allPricesEl.find(el => el.attributes['data-id'].value === id).innerText = `${ totalPrice } uah`;
+			allPricesEl.find(el => el.attributes['data-id'].value === id).innerText = `${ totalPrice }`;
+			if(isOverMax) this.nowActiveInput.target.value = max;
+			if(isOverMin) this.nowActiveInput.target.value = 0;
 		}
 		this.totalPriceContainer.innerText = `${allPricesEl.reduce((acc, curr) => acc + parseFloat(curr.innerText), 0)} uah`;
 	}

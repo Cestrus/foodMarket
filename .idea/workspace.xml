@@ -7,9 +7,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/basket/model-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/model-basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/basket/styles/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/styles/basket.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/basket/view-basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/basket/view-basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/customer/styles/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/customer/styles/customer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loader/loader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/loader.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +77,8 @@
       <workItem from="1609848037252" duration="13461000" />
       <workItem from="1609912590243" duration="53730000" />
       <workItem from="1610009398273" duration="31416000" />
-      <workItem from="1610217934011" duration="10758000" />
+      <workItem from="1610217934011" duration="12324000" />
+      <workItem from="1610267310306" duration="5927000" />
     </task>
     <servers />
   </component>

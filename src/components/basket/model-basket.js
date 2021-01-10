@@ -9,13 +9,15 @@ class ModelBasket {
 	}
 
 	changeCountProduct( id, count = null, max = null ){
+		let isOverMax = false;
+		let isOverMin = false;
 		let product = this.basket.find(prod => prod.ID === +id);
 		if (!product) {
 			product = {};
 			Object.assign(product, this.getStore().find( prod => prod.ID === +id ));
 			this.basket.push( product );
 		}
-		if(!product.countInBasket) {
+		if(!product.countInBasket && product.countInBasket !== 0) {
 			product.countInBasket = 1;
 			this.changeCounter();
 		} else if (!count) {
@@ -23,14 +25,16 @@ class ModelBasket {
 			this.changeCounter();
 		} else if (Number(count) < 0) {
 			product.countInBasket = 0;
+			isOverMin = true;
 		} else if (Number(count) > Number(max)) {
 			product.countInBasket = max;
+			isOverMax = true;
 		} else {
 			product.countInBasket = Number(count);
 			this.changeCounter();
 		}
 		this.activityReducer('SAVE_USER_DATA', this.basket);
-		return product.PRICE * product.countInBasket;
+		return { totalPrice: product.PRICE * product.countInBasket, isOverMax, isOverMin };
 	}
 
 	changeCounter(){
@@ -67,6 +71,7 @@ class ModelBasket {
 	clearBasket(){
 		this.activityReducer('SAVE_USER_DATA', this.basket);
 		this.basket.length = 0;
+		this.changeCounter();
 		return this.basket;
 	}
 
@@ -74,6 +79,7 @@ class ModelBasket {
 		const message = `Sell products on ${totalPrice} `;
 		this.activityReducer('SEND_MESSAGE', message);
 		this.clearBasket();
+		return this.basket;
 	}
 }
 

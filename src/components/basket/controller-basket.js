@@ -31,7 +31,8 @@ export class ControllerBasket {
 	}
 
 	changeCountProduct({id, count, max}){
-		this.view.renderTotalPrice( id, this.model.changeCountProduct(id, count, max) );
+		const { totalPrice, isOverMax, isOverMin } = this.model.changeCountProduct(id, count, max);
+		this.view.renderTotalPrice( id, totalPrice, isOverMax, isOverMin, max );
 		this.view.renderCounter( this.model.counter );
 	}
 
@@ -53,7 +54,9 @@ export class ControllerBasket {
 	}
 
 	buyAllBasket( totalPrice ){
-		this.model.buyAllBasket( totalPrice );
+		const basket = this.model.buyAllBasket( totalPrice );
+		this.view.renderCounter( basket.length );
+		this.view.renderBasketDetails( basket );
 	}
 
 }

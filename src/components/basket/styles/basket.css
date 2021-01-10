@@ -82,7 +82,6 @@
 .basket-item-totalPrice {
 	text-align: left;
 	padding-left: 20px;
-	font-size: calc(5px + 50%);
 }
 
 .btn-basket-wrap {
